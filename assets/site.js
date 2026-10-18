@@ -1,4 +1,4 @@
-// Общее для всех страниц: язык и фон шапки.
+// Общее для всех страниц: язык, фон шапки и (по желанию) появление блоков при прокрутке.
 //
 // Русский текст лежит прямо в разметке, у каждого переводимого места — ключ `data-i18n`
 // (или `data-i18n-aria` для aria-label). Английский страница передаёт в `Site.init({ en })`.
@@ -48,7 +48,45 @@ window.Site = (() => {
     update();
   }
 
-  function init({ en, onLanguage: callback }) {
+  // Блоки разделов проявляются из размытия, когда доходят до экрана (включается `reveal: true`). Сетки и списки —
+  // по элементу, лесенкой. После появления класс снимается, чтобы вернуть блокам свои переходы.
+  function watchReveal() {
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const groups = '.cards, .rules, .platforms, .steps';
+    const targets = [];
+    document.querySelectorAll('main .section > .wrap').forEach((wrap) => {
+      [...wrap.children].forEach((el) => {
+        if (el.matches(groups)) targets.push(...el.children);
+        else targets.push(el);
+      });
+    });
+
+    const show = (el, delay) => {
+      el.style.setProperty('--reveal-delay', `${delay}ms`);
+      el.classList.add('is-shown');
+      el.addEventListener('transitionend', function done(e) {
+        if (e.target !== el || e.propertyName !== 'opacity') return;
+        el.removeEventListener('transitionend', done);
+        el.classList.remove('reveal', 'is-shown');
+        el.style.removeProperty('--reveal-delay');
+      });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      let step = 0;
+      entries.forEach((entry) => {
+        // Выше экрана (например, страницу открыли с середины) — показываем сразу.
+        const above = entry.boundingClientRect.bottom < 0;
+        if (!entry.isIntersecting && !above) return;
+        observer.unobserve(entry.target);
+        show(entry.target, above ? 0 : Math.min(step++, 5) * 90);
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+
+    targets.forEach((el) => { el.classList.add('reveal'); observer.observe(el); });
+  }
+
+  function init({ en, onLanguage: callback, reveal = false }) {
     TEXT.en = en;
     TEXT.ru = {
       'meta.title': document.title,
@@ -65,6 +103,7 @@ window.Site = (() => {
 
     apply(pickLanguage());
     watchNav();
+    if (reveal) watchReveal();
   }
 
   return { init, get lang() { return lang; } };
