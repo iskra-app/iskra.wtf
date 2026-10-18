@@ -44,7 +44,7 @@
     <section class="page-hero">
       <div class="wrap">
         <h1 data-i18n="hero.title">Свой сервер Matrix</h1>
-        <p data-i18n="hero.intro">На своём сервере всё решаете вы: кто на нём общается, где хранятся данные и какие действуют правила. Понадобятся домен, небольшой сервер и один вечер.</p>
+        <p data-i18n="hero.intro">На&nbsp;своём сервере всё решаете вы: кто на&nbsp;нём общается, где хранятся данные и какие действуют правила. Понадобятся домен, небольшой сервер и один вечер.</p>
       </div>
     </section>
 
@@ -61,13 +61,13 @@
           </article>
           <article class="card">
             <span class="tile" style="--c:var(--green)"><svg class="icon"><use href="assets/sprite.svg#i-server"/></svg></span>
-            <h3 data-i18n="need.vps.t">Сервер с Linux</h3>
-            <p data-i18n="need.vps.p">Подойдёт недорогой VPS: от 2 ядер и 2 ГБ памяти. Нужен постоянный адрес в интернете и открытые порты 80 и 443.</p>
+            <h3 data-i18n="need.vps.t">Сервер с&nbsp;Linux</h3>
+            <p data-i18n="need.vps.p">Подойдёт недорогой VPS: от&nbsp;2 ядер и 2 ГБ памяти. Нужен постоянный адрес в&nbsp;интернете и открытые порты 80 и 443.</p>
           </article>
           <article class="card">
             <span class="tile" style="--c:var(--violet)"><svg class="icon"><use href="assets/sprite.svg#i-terminal"/></svg></span>
             <h3 data-i18n="need.skills.t">Немного командной строки</h3>
-            <p data-i18n="need.skills.p">Нужно уметь зайти на сервер по SSH и выполнить пару команд. Всё остальное подскажет инструкция.</p>
+            <p data-i18n="need.skills.p">Нужно уметь зайти на&nbsp;сервер по&nbsp;SSH и выполнить пару команд. Всё остальное подскажет инструкция.</p>
           </article>
         </div>
       </div>
@@ -82,11 +82,11 @@
         <ul class="rules">
           <li>
             <h3><a href="https://github.com/element-hq/synapse">Synapse</a><span class="badge" data-i18n="choose.recommended">Рекомендуем</span></h3>
-            <p data-i18n="choose.synapse">Основной сервер Matrix, его делает Element. Sliding sync включён по умолчанию с версии 1.114, так что подойдёт любая свежая версия.</p>
+            <p data-i18n="choose.synapse">Основной сервер Matrix, его делает Element. Sliding sync включён по&nbsp;умолчанию с&nbsp;версии 1.114, так что подойдёт любая свежая версия.</p>
           </li>
           <li>
             <h3><a href="https://github.com/matrix-construct/tuwunel">Tuwunel</a>, <a href="https://forgejo.ellis.link/continuwuation/continuwuity">Continuwuity</a></h3>
-            <p data-i18n="choose.rust">Лёгкие серверы на Rust, им хватает совсем скромного железа. Поддержку sliding sync в них ещё дорабатывают, поэтому с Iskra что-то может не работать.</p>
+            <p data-i18n="choose.rust">Лёгкие серверы на&nbsp;Rust, им хватает совсем скромного железа. Поддержку sliding sync в&nbsp;них ещё дорабатывают, поэтому с&nbsp;Iskra что-то может не работать.</p>
           </li>
         </ul>
       </div>
@@ -95,14 +95,14 @@
     <section class="section">
       <div class="wrap">
         <div class="head">
-          <h2 data-i18n="how.title">Проще всего — с ESS Community</h2>
-          <p data-i18n="how.p">Это бесплатная сборка от Element: Synapse, вход через Matrix Authentication Service, веб-клиент и панель администратора ставятся одним набором. Ниже — коротко, по шагам.</p>
+          <h2 data-i18n="how.title">Проще всего — с&nbsp;ESS Community</h2>
+          <p data-i18n="how.p">Это бесплатная сборка от&nbsp;Element: Synapse, вход через Matrix Authentication Service, веб-клиент и панель администратора ставятся одним набором. Ниже — коротко, по&nbsp;шагам.</p>
         </div>
         <ol class="steps">
           <li>
             <div class="step">
               <h3 data-i18n="s1.t">Настройте домен</h3>
-              <p data-i18n="s1.p">Направьте на адрес сервера (запись A) сам домен и пять поддоменов:</p>
+              <p data-i18n="s1.p">Направьте на&nbsp;адрес сервера (запись A) сам домен и пять поддоменов:</p>
               <div class="code" data-nocopy><pre><code data-i18n="s1.hosts">example.org          — адрес в Matrix: @вы:example.org
 matrix.example.org   — Synapse
 account.example.org  — вход и аккаунты
@@ -115,15 +115,15 @@ mrtc.example.org     — звонки</code></pre></div>
           <li>
             <div class="step">
               <h3 data-i18n="s2.t">Установите K3s и Helm</h3>
-              <p data-i18n="s2.p">K3s — лёгкий Kubernetes, в котором будет жить сервер. Он ставится одной командой:</p>
+              <p data-i18n="s2.p">K3s — лёгкий Kubernetes, в&nbsp;котором будет жить сервер. Он ставится одной командой:</p>
               <div class="code"><pre><code>curl -sfL https://get.k3s.io | sh -</code></pre></div>
-              <p data-i18n="s2.helm">Потом дайте себе доступ к K3s и поставьте Helm — это ещё несколько коротких команд из <a href="https://github.com/element-hq/ess-helm#kubernetes-single-node-setup-with-k3s">README ESS</a>.</p>
+              <p data-i18n="s2.helm">Потом дайте себе доступ к&nbsp;K3s и поставьте Helm — это ещё несколько коротких команд из <a href="https://github.com/element-hq/ess-helm#kubernetes-single-node-setup-with-k3s">README ESS</a>.</p>
             </div>
           </li>
           <li>
             <div class="step">
               <h3 data-i18n="s3.t">Опишите свои адреса</h3>
-              <p data-i18n="s3.p">Создайте папку <code>~/ess-config-values</code>, а в ней файл <code>hostnames.yaml</code>. Подставьте свой домен вместо example.org:</p>
+              <p data-i18n="s3.p">Создайте папку <code>~/ess-config-values</code>, а в&nbsp;ней файл <code>hostnames.yaml</code>. Подставьте свой домен вместо example.org:</p>
               <div class="code"><pre><code>serverName: example.org
 synapse:
   ingress:
@@ -155,15 +155,15 @@ matrixRTC:
           <li>
             <div class="step">
               <h3 data-i18n="s5.t">Создайте первый аккаунт</h3>
-              <p data-i18n="s5.p">Регистрация на новом сервере выключена, поэтому первый аккаунт создаётся командой. Она спросит имя и пароль:</p>
+              <p data-i18n="s5.p">Регистрация на&nbsp;новом сервере выключена, поэтому первый аккаунт создаётся командой. Она спросит имя и пароль:</p>
               <div class="code"><pre><code>kubectl exec -n ess -it deploy/ess-matrix-authentication-service \
   -- mas-cli manage register-user</code></pre></div>
             </div>
           </li>
           <li>
             <div class="step">
-              <h3 data-i18n="s6.t">Войдите из Iskra</h3>
-              <p data-i18n="s6.p">На экране входа введите свой домен, например <code>example.org</code>. Откроется страница входа вашего сервера. А чтобы проверить, что сервер видят другие, загляните в <a href="https://federationtester.matrix.org">Federation Tester</a>.</p>
+              <h3 data-i18n="s6.t">Войдите из&nbsp;Iskra</h3>
+              <p data-i18n="s6.p">На&nbsp;экране входа введите свой домен, например <code>example.org</code>. Откроется страница входа вашего сервера. А чтобы проверить, что сервер видят другие, загляните в <a href="https://federationtester.matrix.org">Federation Tester</a>.</p>
             </div>
           </li>
         </ol>
@@ -185,9 +185,9 @@ matrixRTC:
         </div>
         <ul class="rules">
           <li><h3 data-i18n="after.backup.t">Резервные копии</h3><p data-i18n="after.backup.p">Сохраняйте базу данных и загруженные файлы. Без копии сломанный диск унесёт всю переписку сервера.</p></li>
-          <li><h3 data-i18n="after.updates.t">Обновления</h3><p data-i18n="after.updates.p">Время от времени запускайте ту же команду <code>helm upgrade</code>: она подтянет свежие версии с исправлениями.</p></li>
-          <li><h3 data-i18n="after.signup.t">Регистрация для друзей</h3><p data-i18n="after.signup.p">Чтобы люди могли заводить аккаунты сами, подключите к серверу почту (SMTP). Или создавайте аккаунты той же командой.</p></li>
-          <li><h3 data-i18n="after.other.t">Другие способы</h3><p data-i18n="after.other.p">Любите Ansible — есть <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy">matrix-docker-ansible-deploy</a> с мостами в другие мессенджеры. Хотите всё вручную — есть <a href="https://element-hq.github.io/synapse/latest/setup/installation.html">документация Synapse</a>.</p></li>
+          <li><h3 data-i18n="after.updates.t">Обновления</h3><p data-i18n="after.updates.p">Время от&nbsp;времени запускайте ту же команду <code>helm upgrade</code>: она подтянет свежие версии с&nbsp;исправлениями.</p></li>
+          <li><h3 data-i18n="after.signup.t">Регистрация для друзей</h3><p data-i18n="after.signup.p">Чтобы люди могли заводить аккаунты сами, подключите к&nbsp;серверу почту (SMTP). Или создавайте аккаунты той же командой.</p></li>
+          <li><h3 data-i18n="after.other.t">Другие способы</h3><p data-i18n="after.other.p">Любите Ansible — есть <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy">matrix-docker-ansible-deploy</a> с&nbsp;мостами в&nbsp;другие мессенджеры. Хотите всё вручную — есть <a href="https://element-hq.github.io/synapse/latest/setup/installation.html">документация Synapse</a>.</p></li>
         </ul>
       </div>
     </section>
@@ -195,7 +195,7 @@ matrixRTC:
     <section class="section download cta">
       <div class="wrap">
         <h2 data-i18n="cta.title">Не хочется возиться</h2>
-        <p data-i18n="cta.p">Это нормально. Можно начать с готового сервера, а свой поднять потом.</p>
+        <p data-i18n="cta.p">Это нормально. Можно начать с&nbsp;готового сервера, а свой поднять потом.</p>
         <div class="hero__cta">
           <a class="button button--primary" href="matrix.html#servers" data-i18n="cta.servers">Выбрать готовый сервер</a>
           <a class="button button--plain" href="./#download" data-i18n="cta.download">Скачать Iskra</a>
@@ -206,7 +206,7 @@ matrixRTC:
 
   <footer>
     <div class="wrap">
-      <p data-i18n="footer.text">Iskra в разработке. Распространяется по лицензии GPL-3.0.</p>
+      <p data-i18n="footer.text">Iskra в&nbsp;разработке. Распространяется по&nbsp;лицензии GPL-3.0.</p>
       <nav aria-label="Ссылки" data-i18n-aria="footer.links">
         <a href="./" data-i18n="footer.home">Главная</a>
         <a href="matrix.html" data-i18n="footer.matrix">Что такое Matrix</a>
