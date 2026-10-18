@@ -48,40 +48,29 @@ window.Site = (() => {
     update();
   }
 
-  // Блоки разделов проявляются из размытия, когда доходят до экрана (включается `reveal: true`). Сетки и списки —
-  // по элементу, лесенкой. После появления класс снимается, чтобы вернуть блокам свои переходы.
+  // Разделы проявляются из размытия, когда доходят до экрана (включается `reveal: true`).
+  // После появления класс снимается, чтобы вернуть блокам внутри свои переходы.
   function watchReveal() {
     if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const groups = '.cards, .rules, .platforms, .steps';
-    const targets = [];
-    document.querySelectorAll('main .section > .wrap').forEach((wrap) => {
-      [...wrap.children].forEach((el) => {
-        if (el.matches(groups)) targets.push(...el.children);
-        else targets.push(el);
-      });
-    });
+    const targets = document.querySelectorAll('main .section > .wrap');
 
-    const show = (el, delay) => {
-      el.style.setProperty('--reveal-delay', `${delay}ms`);
+    const show = (el) => {
       el.classList.add('is-shown');
       el.addEventListener('transitionend', function done(e) {
         if (e.target !== el || e.propertyName !== 'opacity') return;
         el.removeEventListener('transitionend', done);
         el.classList.remove('reveal', 'is-shown');
-        el.style.removeProperty('--reveal-delay');
       });
     };
 
     const observer = new IntersectionObserver((entries) => {
-      let step = 0;
       entries.forEach((entry) => {
         // Выше экрана (например, страницу открыли с середины) — показываем сразу.
-        const above = entry.boundingClientRect.bottom < 0;
-        if (!entry.isIntersecting && !above) return;
+        if (!entry.isIntersecting && entry.boundingClientRect.bottom >= 0) return;
         observer.unobserve(entry.target);
-        show(entry.target, above ? 0 : Math.min(step++, 5) * 90);
+        show(entry.target);
       });
-    }, { rootMargin: '0px 0px -8% 0px' });
+    }, { rootMargin: '0px 0px -10% 0px' });
 
     targets.forEach((el) => { el.classList.add('reveal'); observer.observe(el); });
   }
