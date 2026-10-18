@@ -350,6 +350,91 @@
     }
 
     Site.init({ en: EN, onLanguage: renderDownloads, reveal: true });
+
+
+    // ── Подзаголовок и описание «расшифровываются» при загрузке ──
+    // Сначала вместо букв случайные знаки, потом слева направо проступает настоящий текст.
+    // Чтобы текст не прыгал: случайный знак берётся из того же алфавита и регистра и почти
+    // той же ширины в этом шрифте, а переносы строк на время эффекта закреплены там же,
+    // где они стоят у настоящего текста.
+    // Запускается после Site.init: тот читает русский текст из разметки.
+    function decrypt(el, { start, spread }) {
+      const CLASSES = [
+        'абвгдежзийклмнопрстуфхцчшщыьэюя', 'АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЭЮЯ',
+        'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '0123456789',
+      ];
+      const SYMBOLS = '#%&*$@+=<>?';
+      const ctx = document.createElement('canvas').getContext('2d');
+      ctx.font = getComputedStyle(el).font;
+      const width = (ch) => ctx.measureText(ch).width;
+      const near = (chars, ch, tolerance) => {
+        const w = width(ch);
+        return [...chars].filter((c) => c !== ch && Math.abs(width(c) - w) <= w * tolerance);
+      };
+      const twins = new Map();
+      const fakeFor = (ch) => {
+        if (!twins.has(ch)) {
+          const own = CLASSES.find((set) => set.includes(ch)) || '';
+          twins.set(ch, { letters: near(own, ch, 0.08), symbols: near(SYMBOLS, ch, 0.08) });
+        }
+        const { letters, symbols } = twins.get(ch);
+        const list = symbols.length && (Math.random() < 0.15 || !letters.length) ? symbols : letters;
+        return list.length ? list[Math.floor(Math.random() * list.length)] : ch;
+      };
+
+      // Где браузер переносит строки у настоящего текста: пробел перед первой буквой новой строки.
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      const nodes = [];
+      const range = document.createRange();
+      let top = null;
+      let lastSpace = null;
+      while (walker.nextNode()) {
+        const node = walker.currentNode;
+        const item = { node, text: node.data, breaks: new Set() };
+        nodes.push(item);
+        for (let i = 0; i < node.data.length; i++) {
+          if (/\s/.test(node.data[i])) { lastSpace = { item, i }; continue; }
+          range.setStart(node, i);
+          range.setEnd(node, i + 1);
+          const rect = range.getClientRects()[0];
+          if (!rect) continue;
+          if (top !== null && rect.top > top + 1 && lastSpace) lastSpace.item.breaks.add(lastSpace.i);
+          top = rect.top;
+        }
+      }
+      const total = nodes.reduce((n, { text }) => n + text.length, 0);
+      let offset = 0;
+      nodes.forEach((item) => {
+        item.at = [...item.text].map((_, i) => start + ((offset + i) / total) * spread + Math.random() * 150);
+        offset += item.text.length;
+      });
+
+      el.style.whiteSpace = 'pre';
+      const t0 = performance.now();
+      let last = -Infinity;
+      (function frame(now) {
+        if (!el.contains(nodes[0].node)) { el.style.whiteSpace = ''; return; } // переключили язык
+        const t = now - t0;
+        if (t - last >= 50) {
+          last = t;
+          nodes.forEach((item) => {
+            item.node.data = [...item.text].map((ch, i) => {
+              if (item.breaks.has(i)) return '\n';
+              if (t >= item.at[i] || !/[\p{L}\p{N}]/u.test(ch)) return ch;
+              return fakeFor(ch);
+            }).join('');
+          });
+        }
+        if (t < start + spread + 150) return requestAnimationFrame(frame);
+        nodes.forEach((item) => { item.node.data = item.text; });
+        el.style.whiteSpace = '';
+      })(t0);
+    }
+
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      decrypt(document.querySelector('.hero__sub'), { start: 100, spread: 550 });
+      decrypt(document.querySelector('.hero__body'), { start: 250, spread: 800 });
+    }
   </script>
 </body>
 </html>
