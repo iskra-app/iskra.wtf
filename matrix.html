@@ -8,12 +8,12 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f7f6f1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0a0a08" media="(prefers-color-scheme: dark)">
-  <link rel="canonical" href="https://iskra.wtf/matrix.html">
+  <link rel="canonical" href="https://iskra.wtf/matrix">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Iskra">
   <meta property="og:title" content="Что такое Matrix — Iskra">
   <meta property="og:description" content="Matrix — открытый способ, которым приложения для переписки общаются между собой. Как почта, только для чатов.">
-  <meta property="og:url" content="https://iskra.wtf/matrix.html">
+  <meta property="og:url" content="https://iskra.wtf/matrix">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:image" content="https://iskra.wtf/assets/og.png">
@@ -140,8 +140,8 @@
               <span class="server-where" data-i18n="servers.nopeChatWhere">Германия</span></p>
           </li>
           <li>
-            <h3><a href="server.html" data-i18n="servers.ownTitle">Свой сервер</a></h3>
-            <p><span data-i18n="servers.ownAbout">Можно поднять собственный сервер — тогда переписка будет полностью в&nbsp;ваших руках. Понадобятся свой домен и&nbsp;немного времени.</span> <a class="more" href="server.html" data-i18n="servers.ownHow">Как это сделать</a></p>
+            <h3><a href="server" data-i18n="servers.ownTitle">Свой сервер</a></h3>
+            <p><span data-i18n="servers.ownAbout">Можно поднять собственный сервер — тогда переписка будет полностью в&nbsp;ваших руках. Понадобятся свой домен и&nbsp;немного времени.</span> <a class="more" href="server" data-i18n="servers.ownHow">Как это сделать</a></p>
           </li>
         </ul>
       </div>
@@ -164,10 +164,13 @@
       <p>Iskra App</p>
       <nav aria-label="Ссылки" data-i18n-aria="footer.links">
         <a href="./" data-i18n="footer.home">Главная</a>
-        <a href="server.html" data-i18n="footer.server">Свой сервер</a>
+        <a href="matrix" data-i18n="footer.matrix">Что такое Matrix</a>
+        <a href="server" data-i18n="footer.server">Свой сервер</a>
+        <a href="https://github.com/iskra-app/iskra-bridge" data-i18n="footer.bridge">Мост</a>
         <a href="https://github.com/iskra-app">GitHub</a>
         <a href="https://github.com/iskra-app/iskra/blob/main/LICENSE" data-i18n="footer.license">Лицензия</a>
-        <a href="https://matrix.org" data-i18n="footer.matrixOrg">Сайт Matrix</a>
+        <a href="privacy" data-i18n="footer.privacy">Конфиденциальность</a>
+        <a href="terms" data-i18n="footer.terms">Условия</a>
       </nav>
       <div class="lang" role="group" aria-label="Язык / Language">
         <button type="button" data-lang="ru" lang="ru">Русский</button>
@@ -224,9 +227,12 @@
         'cta.web': 'Open in&nbsp;browser',
         'footer.links': 'Links',
         'footer.home': 'Home',
+        'footer.matrix': 'What is&nbsp;Matrix',
         'footer.server': 'Your own server',
+        'footer.bridge': 'Bridge',
         'footer.license': 'Licence',
-        'footer.matrixOrg': 'Matrix website',
+        'footer.privacy': 'Privacy',
+        'footer.terms': 'Terms',
       },
     });
   </script>

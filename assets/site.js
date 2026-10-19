@@ -4,6 +4,17 @@
 // (или `data-i18n-aria` для aria-label). Английский страница передаёт в `Site.init({ en })`.
 // Язык: ?lang=… → выбор в подвале → язык браузера. Русский для ru, английский для остальных.
 window.Site = (() => {
+  // Адрес страницы — без .html, как в её canonical: /privacy.html → /privacy.
+  // GitHub Pages отдаёт один файл по обоим адресам, поэтому настоящего редиректа нет —
+  // меняем только строку адреса, без перезагрузки. Поисковикам хватает canonical.
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical && location.pathname.endsWith('.html')) {
+    const clean = new URL(canonical.href).pathname;
+    if (!clean.endsWith('.html') && location.pathname.slice(0, -5) === clean) {
+      history.replaceState(history.state, '', clean + location.search + location.hash);
+    }
+  }
+
   let lang = 'ru';
   let onLanguage = () => {};
   const TEXT = { ru: {}, en: {} };

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Политика конфиденциальности — Iskra</title>
+  <meta name="description" content="Какие данные проходят через Iskra, кто их видит и сколько они хранятся. Коротко: мы не собираем ваши данные.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f7f6f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a08" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://iskra.wtf/privacy">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Iskra">
+  <meta property="og:title" content="Политика конфиденциальности — Iskra">
+  <meta property="og:description" content="Какие данные проходят через Iskra, кто их видит и сколько они хранятся.">
+  <meta property="og:url" content="https://iskra.wtf/privacy">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://iskra.wtf/assets/og.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Иконка Iskra и надпись: Iskra, мессенджер на Matrix для iPhone, iPad и Mac">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Политика конфиденциальности — Iskra">
+  <meta name="twitter:description" content="Какие данные проходят через Iskra, кто их видит и сколько они хранятся.">
+  <meta name="twitter:image" content="https://iskra.wtf/assets/og.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-cyrillic-normal.woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts/inter.css">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="wrap">
+      <a class="brand" href="./"><svg viewBox="0 0 747 731" aria-hidden="true"><use href="assets/sprite.svg#spark"/></svg>Iskra</a>
+      <a class="button button--primary button--small" href="./#download" data-i18n="nav.download">Скачать</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <h1 data-i18n="hero.title">Политика конфиденциальности</h1>
+        <p data-i18n="hero.intro">Коротко: мы&nbsp;не&nbsp;собираем ваши данные и&nbsp;не&nbsp;можем прочитать ваши сообщения. Ниже&nbsp;— подробно, что и&nbsp;куда уходит, когда вы&nbsp;пользуетесь Iskra.</p>
+        <p class="updated" data-i18n="hero.updated">Действует с&nbsp;19&nbsp;октября 2026&nbsp;года</p>
+      </div>
+    </section>
+
+    <section class="section section--legal" data-nav-solid>
+      <div class="wrap">
+        <ol class="legal">
+          <li>
+            <h2 data-i18n="who.t">Кто мы</h2>
+            <div class="legal__body" data-i18n="who.p">
+              <p>Iskra&nbsp;— мессенджер с&nbsp;открытым кодом. Его делают участники проекта (дальше&nbsp;— «мы»).</p>
+              <p>Эта политика касается приложений Iskra для iPhone, iPad, Mac и&nbsp;Android, веб-версии на&nbsp;<a href="https://web.iskra.wtf">web.iskra.wtf</a>, этого сайта и&nbsp;двух служб, которые мы&nbsp;держим сами: шлюза уведомлений и&nbsp;моста.</p>
+            </div>
+          </li>
+          <li>
+            <h2 data-i18n="server.t">Ваши данные живут на&nbsp;сервере Matrix</h2>
+            <div class="legal__body" data-i18n="server.p">
+              <p>Iskra&nbsp;— только приложение. Аккаунт, сообщения, файлы и&nbsp;список контактов хранит сервер Matrix, который вы&nbsp;выбрали при входе. Мы&nbsp;такие серверы не&nbsp;держим, и&nbsp;что на&nbsp;них происходит с&nbsp;данными, решает их&nbsp;владелец. Прочитайте его правила и&nbsp;политику конфиденциальности.</p>
+              <p>Серверы, которые Iskra предлагает при регистрации, выбрали мы, но&nbsp;отвечать за&nbsp;них не&nbsp;можем. Когда вы&nbsp;пишете в&nbsp;комнату, копии сообщений получают серверы всех её&nbsp;участников. В&nbsp;зашифрованных комнатах они видят только шифротекст, а&nbsp;ещё&nbsp;— кто, где и&nbsp;когда писал.</p>
+            </div>
+          </li>
+          <li>
+            <h2 data-i18n="device.t">Что хранится на&nbsp;устройстве</h2>
+            <div class="legal__body" data-i18n="device.p">
+              <p>Чтобы чаты открывались быстро и&nbsp;работали без сети, Iskra хранит на&nbsp;устройстве копию переписки, ключи шифрования и&nbsp;настройки.</p>
+              <ul>
+                <li>Токены входа и&nbsp;ключи лежат в&nbsp;защищённом хранилище системы, например в&nbsp;Связке ключей. Они не&nbsp;попадают в&nbsp;резервные копии.</li>
+                <li>Переписка на&nbsp;диске зашифрована. Поиск по&nbsp;сообщениям работает на&nbsp;устройстве, запросы никуда не&nbsp;уходят.</li>
+                <li>Веб-версия хранит то&nbsp;же&nbsp;самое в&nbsp;хранилище браузера.</li>
+                <li>В&nbsp;журналы приложения не&nbsp;попадают ни&nbsp;сообщения, ни&nbsp;токены, ни&nbsp;пароли. Журналы остаются на&nbsp;устройстве, пока вы&nbsp;сами не&nbsp;решите кому-то их&nbsp;отправить.</li>
+              </ul>
+              <p>Когда вы&nbsp;выходите из&nbsp;аккаунта или удаляете приложение, всё это стирается.</p>
+            </div>
+          </li>
+          <li>
+            <h2 data-i18n="not.t">Чего мы&nbsp;не&nbsp;делаем</h2>
+            <div class="legal__body" data-i18n="not.p">
+              <ul>
+                <li>Не&nbsp;заводим вам аккаунт у&nbsp;себя и&nbsp;не&nbsp;просим почту или телефон.</li>
+                <li>Не&nbsp;встраиваем аналитику, рекламу и&nbsp;трекеры. Отчёты о&nbsp;сбоях сами не&nbsp;отправляются.</li>
+                <li>Не&nbsp;продаём и&nbsp;не&nbsp;передаём данные ни&nbsp;рекламщикам, ни&nbsp;кому-то ещё.</li>
+                <li>Не&nbsp;читаем сообщения: шифрование работает на&nbsp;устройствах, ключей у&nbsp;нас нет.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <h2 data-i18n="push.t">Уведомления</h2>
+            <div class="legal__body" data-i18n="push.p">
+              <p>Если вы&nbsp;разрешили уведомления, ваш сервер Matrix при новом сообщении обращается к&nbsp;нашему шлюзу <code>push.iskra.wtf</code>. Шлюз получает только:</p>
+              <ul>
+                <li>идентификаторы комнаты и&nbsp;сообщения&nbsp;— без текста и&nbsp;без имени отправителя;</li>
+                <li>число непрочитанных;</li>
+                <li>токен вашего устройства в&nbsp;службе уведомлений.</li>
+              </ul>
+              <p>Шлюз передаёт это в&nbsp;службу уведомлений платформы: Apple Push Notification service на&nbsp;iPhone, iPad и&nbsp;Mac, Firebase Cloud Messaging от&nbsp;Google в&nbsp;Android-сборке из&nbsp;Google Play. В&nbsp;сборке без сервисов Google уведомления идут через выбранную вами службу UnifiedPush. Само сообщение приложение скачивает с&nbsp;вашего сервера и&nbsp;расшифровывает на&nbsp;устройстве.</p>
+              <p>Токен устройства не&nbsp;связан с&nbsp;вашим адресом в&nbsp;Matrix. Если выйти из&nbsp;аккаунта или выключить уведомления, сервер перестанет обращаться к&nbsp;шлюзу.</p>
+            </div>
+          </li>
+          <li>
+            <h2 data-i18n="bridge.t">Мост</h2>
+            <div class="legal__body" data-i18n="bridge.p">
+              <p>Мост выключен, пока вы&nbsp;сами его не&nbsp;включите. С&nbsp;ним Iskra ходит к&nbsp;серверу Matrix через ретрансляторы сети nostr, и&nbsp;ваш провайдер не&nbsp;видит, с&nbsp;каким сервером вы&nbsp;общаетесь.</p>
+              <p>Соединение с&nbsp;сервером зашифровано от&nbsp;вашего устройства до&nbsp;самого сервера, поэтому мост не&nbsp;видит ни&nbsp;сообщений, ни&nbsp;токенов, ни&nbsp;адресов комнат. Он&nbsp;видит адрес сервера Matrix, время и&nbsp;объём трафика и&nbsp;ключ вашего устройства в&nbsp;nostr. Ваш IP-адрес видят ретрансляторы nostr, которые держим не&nbsp;мы, но&nbsp;не&nbsp;мост.</p>
+              <p>Вместо нашего моста можно <a href="https://github.com/iskra-app/iskra-bridge">поставить свой</a>.</p>
+            </div>
+          </li>
+          <li>
+            <h2 data-i18n="site.t">Сайт и&nbsp;веб-версия</h2>
+            <div class="legal__body" data-i18n="site.p">
+              <p>На&nbsp;iskra.wtf и&nbsp;web.iskra.wtf нет cookie, аналитики и&nbsp;счётчиков. Сайт запоминает в&nbsp;браузере только выбранный язык.</p>
+              <p>Сайт iskra.wtf размещён на&nbsp;GitHub Pages, и&nbsp;GitHub записывает технические данные посещений по&nbsp;своей <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">политике конфиденциальности</a>. Веб-версия работает на&nbsp;нашем сервере.</p>
+            </div>
+          </li>
+          <li>
+            <h2 data-i18n="logs.t">Журналы наших серверов</h2>
+            <div class="legal__body" data-i18n="logs.p">
+              <p>Серверы шлюза, моста и&nbsp;веб-версии ведут технические журналы: время запроса, IP-адрес, с&nbsp;которого он&nbsp;пришёл (у&nbsp;шлюза это адрес сервера Matrix), запрошенный адрес и&nbsp;ответ. Без этого не&nbsp;разобраться в&nbsp;сбоях и&nbsp;не&nbsp;отбиться от&nbsp;атак.</p>
+              <p>Журналы хранятся не&nbsp;дольше 30&nbsp;дней, а&nbsp;потом удаляются. Мы&nbsp;смотрим в&nbsp;них, только когда что-то сломалось, и&nbsp;никому их&nbsp;не&nbsp;передаём, кроме случаев, когда этого требует закон.</p>
+            </div>
+          </li>
+          <li>
+            <h2 data-i18n="third.t">Другие службы</h2>
+            <div class="legal__body" data-i18n="third.p">
+              <p>Iskra обращается к&nbsp;сторонним службам, только когда без них не&nbsp;обойтись:</p>
+              <ul>
+                <li><b>Ваш сервер Matrix</b>&nbsp;— для всего, что связано с&nbsp;аккаунтом и&nbsp;перепиской. Предпросмотр ссылок тоже делает он.</li>
+                <li><b>Apple, Google или служба UnifiedPush</b>&nbsp;— для уведомлений, а&nbsp;магазины приложений&nbsp;— для установки и&nbsp;обновлений.</li>
+                <li><b>Ретрансляторы nostr</b>&nbsp;— только при включённом мосте.</li>
+                <li><b>Карты</b>&nbsp;— когда вы&nbsp;открываете присланное местоположение.</li>
+                <li><b>GitHub</b>&nbsp;— здесь лежат код и&nbsp;сборки для Android, а&nbsp;ещё сюда можно написать нам.</li>
+              </ul>
+              <p>У&nbsp;каждой из&nbsp;них свои правила обработки данных.</p>
+            </div>
+          </li>
+          <li>
+            <h2 data-i18n="rights.t">Ваши права</h2>
+            <div class="legal__body" data-i18n="rights.p">
+              <p>У&nbsp;нас почти нет ваших данных, поэтому большую часть вы&nbsp;решаете сами. Чтобы стереть данные с&nbsp;устройства, выйдите из&nbsp;аккаунта. Чтобы удалить сам аккаунт и&nbsp;переписку, обратитесь к&nbsp;владельцу вашего сервера Matrix.</p>
+              <p>Если хотите узнать, есть&nbsp;ли что-то о&nbsp;вас в&nbsp;журналах наших серверов, или попросить это удалить, напишите нам. Если вы&nbsp;живёте в&nbsp;ЕС или Великобритании, можете также пожаловаться в&nbsp;местный орган по&nbsp;защите данных.</p>
+            </div>
+          </li>
+          <li>
+            <h2 data-i18n="changes.t">Изменения</h2>
+            <div class="legal__body" data-i18n="changes.p">
+              <p>Если политика изменится, новая версия появится на&nbsp;этой странице с&nbsp;новой датой вверху. Все прошлые версии можно посмотреть в&nbsp;<a href="https://github.com/iskra-app/iskra.wtf/commits/main/privacy.html">истории изменений</a>.</p>
+            </div>
+          </li>
+          <li>
+            <h2 data-i18n="contact.t">Как с&nbsp;нами связаться</h2>
+            <div class="legal__body" data-i18n="contact.p">
+              <p>Вопросы о&nbsp;конфиденциальности задавайте в&nbsp;<a href="https://github.com/iskra-app/iskra/issues">задачах на&nbsp;GitHub</a>. Об&nbsp;уязвимостях пишите не&nbsp;туда, а&nbsp;через <a href="https://github.com/iskra-app/iskra/security/advisories/new">закрытое сообщение о&nbsp;проблеме безопасности</a>.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Iskra App</p>
+      <nav aria-label="Ссылки" data-i18n-aria="footer.links">
+        <a href="./" data-i18n="footer.home">Главная</a>
+        <a href="matrix" data-i18n="footer.matrix">Что такое Matrix</a>
+        <a href="server" data-i18n="footer.server">Свой сервер</a>
+        <a href="https://github.com/iskra-app/iskra-bridge" data-i18n="footer.bridge">Мост</a>
+        <a href="https://github.com/iskra-app">GitHub</a>
+        <a href="https://github.com/iskra-app/iskra/blob/main/LICENSE" data-i18n="footer.license">Лицензия</a>
+        <a href="privacy" data-i18n="footer.privacy">Конфиденциальность</a>
+        <a href="terms" data-i18n="footer.terms">Условия</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Язык / Language">
+        <button type="button" data-lang="ru" lang="ru">Русский</button>
+        <button type="button" data-lang="en" lang="en">English</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/site.js"></script>
+  <script>
+    Site.init({
+      en: {
+        'meta.title': 'Privacy policy — Iskra',
+        'meta.description': 'What data passes through Iskra, who can see it and how long it’s kept. In short: we don’t collect your data.',
+        'nav.download': 'Download',
+        'hero.title': 'Privacy policy',
+        'hero.intro': 'In&nbsp;short: we&nbsp;don’t collect your data, and we&nbsp;can’t read your messages. Below is&nbsp;the detail: what goes where when you use Iskra.',
+        'hero.updated': 'Effective 19&nbsp;October 2026',
+        'who.t': 'Who we&nbsp;are',
+        'who.p': '<p>Iskra is&nbsp;an&nbsp;open-source messenger made by&nbsp;the contributors to&nbsp;the project (“we” below).</p><p>This policy covers the Iskra apps for iPhone, iPad, Mac and Android, the web version at&nbsp;<a href="https://web.iskra.wtf">web.iskra.wtf</a>, this website, and the two services we&nbsp;run ourselves: the notification gateway and the bridge.</p>',
+        'server.t': 'Your data lives on&nbsp;a&nbsp;Matrix server',
+        'server.p': '<p>Iskra is&nbsp;just the app. Your account, messages, files and contacts are kept by&nbsp;the Matrix server you chose when you signed in. We&nbsp;don’t run those servers, and what happens to&nbsp;your data there is&nbsp;up&nbsp;to&nbsp;their owners. Read your server’s rules and privacy policy.</p><p>We&nbsp;picked the servers Iskra suggests at&nbsp;sign-up, but we&nbsp;can’t answer for them. When you post in&nbsp;a&nbsp;room, the servers of&nbsp;everyone in&nbsp;it&nbsp;get a&nbsp;copy. In&nbsp;encrypted rooms they see only ciphertext, plus who wrote where and when.</p>',
+        'device.t': 'What’s kept on&nbsp;your device',
+        'device.p': '<p>So&nbsp;that chats open fast and work offline, Iskra keeps a&nbsp;copy of&nbsp;your conversations, your encryption keys and your settings on&nbsp;the device.</p><ul><li>Sign-in tokens and keys are kept in&nbsp;the system’s secure storage, such as&nbsp;the Keychain. They never go into backups.</li><li>Conversations are encrypted on&nbsp;disk. Message search runs on&nbsp;the device, and queries never leave it.</li><li>The web version keeps the same things in&nbsp;your browser’s storage.</li><li>No&nbsp;messages, tokens or&nbsp;passwords end up&nbsp;in&nbsp;the app’s logs. Logs stay on&nbsp;the device unless you decide to&nbsp;send them to&nbsp;someone.</li></ul><p>Signing out or&nbsp;deleting the app erases all of&nbsp;it.</p>',
+        'not.t': 'What we&nbsp;don’t do',
+        'not.p': '<ul><li>We&nbsp;don’t create an&nbsp;account for you with&nbsp;us, and we&nbsp;don’t ask for your email or&nbsp;phone number.</li><li>We&nbsp;don’t build in&nbsp;analytics, ads or&nbsp;trackers. Crash reports are never sent on&nbsp;their own.</li><li>We&nbsp;don’t sell or&nbsp;hand over data to&nbsp;advertisers or&nbsp;anyone else.</li><li>We&nbsp;don’t read your messages: encryption happens on&nbsp;your devices, and we&nbsp;don’t have the keys.</li></ul>',
+        'push.t': 'Notifications',
+        'push.p': '<p>If&nbsp;you allow notifications, your Matrix server contacts our gateway at&nbsp;<code>push.iskra.wtf</code> when a&nbsp;new message arrives. The gateway receives only:</p><ul><li>the room and message IDs, with no&nbsp;text and no&nbsp;sender name;</li><li>the unread count;</li><li>your device’s token for the notification service.</li></ul><p>The gateway passes this on&nbsp;to&nbsp;the platform’s notification service: Apple Push Notification service on&nbsp;iPhone, iPad and Mac, and Google’s Firebase Cloud Messaging in&nbsp;the Android build from Google Play. In&nbsp;the build without Google services, notifications go&nbsp;through the UnifiedPush service you chose. The app then fetches the message itself from your server and decrypts it&nbsp;on&nbsp;the device.</p><p>The device token isn’t tied to&nbsp;your Matrix address. If&nbsp;you sign out or&nbsp;turn notifications off, the server stops contacting the gateway.</p>',
+        'bridge.t': 'The bridge',
+        'bridge.p': '<p>The bridge stays off until you turn it&nbsp;on. With it, Iskra reaches your Matrix server through nostr relays, and your internet provider can’t see which server you’re talking to.</p><p>The connection is&nbsp;encrypted all the way from your device to&nbsp;the server, so&nbsp;the bridge can’t see messages, tokens or&nbsp;room addresses. It&nbsp;does see the Matrix server’s address, when and how much data flows, and your device’s nostr key. Your IP&nbsp;address is&nbsp;seen by&nbsp;the nostr relays, which we&nbsp;don’t run, but not by&nbsp;the bridge.</p><p>Instead of&nbsp;ours, you can <a href="https://github.com/iskra-app/iskra-bridge">run your own bridge</a>.</p>',
+        'site.t': 'Website and web version',
+        'site.p': '<p>iskra.wtf and web.iskra.wtf have no&nbsp;cookies, analytics or&nbsp;counters. The website only remembers your chosen language in&nbsp;your browser.</p><p>iskra.wtf is&nbsp;hosted on&nbsp;GitHub Pages, and GitHub records technical data about visits under its <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>. The web version runs on&nbsp;our own server.</p>',
+        'logs.t': 'Our server logs',
+        'logs.p': '<p>The gateway, bridge and web version servers keep technical logs: when a&nbsp;request came in, the IP&nbsp;address it&nbsp;came from (for the gateway, that’s the Matrix server’s address), what was requested and how we&nbsp;answered. Without them we&nbsp;couldn’t fix failures or&nbsp;fend off attacks.</p><p>Logs are kept for no&nbsp;more than 30&nbsp;days, then deleted. We&nbsp;only look at&nbsp;them when something breaks, and we&nbsp;don’t share them with anyone unless the law requires&nbsp;it.</p>',
+        'third.t': 'Other services',
+        'third.p': '<p>Iskra only talks to&nbsp;third-party services when it&nbsp;has to:</p><ul><li><b>Your Matrix server</b>, for everything to&nbsp;do&nbsp;with your account and conversations. It&nbsp;also makes link previews.</li><li><b>Apple, Google or&nbsp;a&nbsp;UnifiedPush service</b>, for notifications, and the app stores for installs and updates.</li><li><b>Nostr relays</b>, only when the bridge is&nbsp;on.</li><li><b>Maps</b>, when you open a&nbsp;location someone sent.</li><li><b>GitHub</b>, which holds the code and the Android builds, and where you can write to&nbsp;us.</li></ul><p>Each of&nbsp;them has its own data rules.</p>',
+        'rights.t': 'Your rights',
+        'rights.p': '<p>We&nbsp;hold almost none of&nbsp;your data, so&nbsp;most of&nbsp;it&nbsp;is&nbsp;in&nbsp;your hands. To&nbsp;erase data from a&nbsp;device, sign out. To&nbsp;delete the account itself and your conversations, contact the owner of&nbsp;your Matrix server.</p><p>If&nbsp;you want to&nbsp;know whether our server logs hold anything about you, or&nbsp;ask for it&nbsp;to&nbsp;be&nbsp;deleted, write to&nbsp;us. If&nbsp;you live in&nbsp;the EU&nbsp;or&nbsp;the UK, you can also complain to&nbsp;your local data protection authority.</p>',
+        'changes.t': 'Changes',
+        'changes.p': '<p>If&nbsp;this policy changes, the new version will appear on&nbsp;this page with a&nbsp;new date at&nbsp;the top. Every earlier version is&nbsp;in&nbsp;the <a href="https://github.com/iskra-app/iskra.wtf/commits/main/privacy.html">change history</a>.</p>',
+        'contact.t': 'How to&nbsp;reach&nbsp;us',
+        'contact.p': '<p>Ask privacy questions in&nbsp;<a href="https://github.com/iskra-app/iskra/issues">GitHub issues</a>. For vulnerabilities, don’t post there: use a&nbsp;<a href="https://github.com/iskra-app/iskra/security/advisories/new">private security report</a> instead.</p>',
+        'footer.links': 'Links',
+        'footer.home': 'Home',
+        'footer.matrix': 'What is&nbsp;Matrix',
+        'footer.server': 'Your own server',
+        'footer.bridge': 'Bridge',
+        'footer.license': 'Licence',
+        'footer.privacy': 'Privacy',
+        'footer.terms': 'Terms',
+      },
+    });
+  </script>
+</body>
+</html>
