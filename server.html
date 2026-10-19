@@ -57,12 +57,12 @@
           <article class="card">
             <span class="tile" style="--c:var(--blue)"><svg class="icon"><use href="assets/sprite.svg#i-globe"/></svg></span>
             <h3 data-i18n="need.domain.t">Свой домен</h3>
-            <p data-i18n="need.domain.p">Он станет частью адресов: <code>@вы:ваш-домен.ru</code>. Сменить его потом нельзя, так что выбирайте тот, что надолго.</p>
+            <p data-i18n="need.domain.p">Он&nbsp;станет частью адресов: <code>@вы:ваш-домен.ru</code>. Сменить его потом нельзя, так что выбирайте тот, что надолго.</p>
           </article>
           <article class="card">
             <span class="tile" style="--c:var(--green)"><svg class="icon"><use href="assets/sprite.svg#i-server"/></svg></span>
             <h3 data-i18n="need.vps.t">Сервер с&nbsp;Linux</h3>
-            <p data-i18n="need.vps.p">Подойдёт недорогой VPS: от&nbsp;2 ядер и&nbsp;2 ГБ памяти. Нужен постоянный адрес в&nbsp;интернете и&nbsp;открытые порты 80 и&nbsp;443.</p>
+            <p data-i18n="need.vps.p">Подойдёт недорогой VPS: от&nbsp;2 ядер и&nbsp;2 ГБ&nbsp;памяти. Нужен постоянный адрес в&nbsp;интернете и&nbsp;открытые порты 80 и&nbsp;443.</p>
           </article>
           <article class="card">
             <span class="tile" style="--c:var(--violet)"><svg class="icon"><use href="assets/sprite.svg#i-terminal"/></svg></span>
@@ -77,7 +77,7 @@
       <div class="wrap">
         <div class="head">
           <h2 data-i18n="choose.title">Берите Synapse</h2>
-          <p data-i18n="choose.p">Iskra получает сообщения через нативный sliding sync (MSC4186). Он нужен, чтобы список чатов открывался мгновенно, но&nbsp;умеют его пока не все серверы.</p>
+          <p data-i18n="choose.p">Iskra получает сообщения через нативный sliding sync (MSC4186). Он&nbsp;нужен, чтобы список чатов открывался мгновенно, но&nbsp;умеют его пока не&nbsp;все серверы.</p>
         </div>
         <ul class="rules">
           <li>
@@ -86,7 +86,7 @@
           </li>
           <li>
             <h3><a href="https://github.com/matrix-construct/tuwunel">Tuwunel</a>, <a href="https://forgejo.ellis.link/continuwuation/continuwuity">Continuwuity</a></h3>
-            <p data-i18n="choose.rust">Лёгкие серверы на&nbsp;Rust, им хватает совсем скромного железа. Поддержку sliding sync в&nbsp;них ещё дорабатывают, поэтому с&nbsp;Iskra что-то может не работать.</p>
+            <p data-i18n="choose.rust">Лёгкие серверы на&nbsp;Rust, им&nbsp;хватает совсем скромного железа. Поддержку sliding sync в&nbsp;них ещё дорабатывают, поэтому с&nbsp;Iskra что-то может не&nbsp;работать.</p>
           </li>
         </ul>
       </div>
@@ -115,9 +115,9 @@ mrtc.example.org     — звонки</code></pre></div>
           <li>
             <div class="step">
               <h3 data-i18n="s2.t">Установите K3s и&nbsp;Helm</h3>
-              <p data-i18n="s2.p">K3s — лёгкий Kubernetes, в&nbsp;котором будет жить сервер. Он ставится одной командой:</p>
+              <p data-i18n="s2.p">K3s — лёгкий Kubernetes, в&nbsp;котором будет жить сервер. Он&nbsp;ставится одной командой:</p>
               <div class="code"><pre><code>curl -sfL https://get.k3s.io | sh -</code></pre></div>
-              <p data-i18n="s2.helm">Потом дайте себе доступ к&nbsp;K3s и&nbsp;поставьте Helm — это ещё несколько коротких команд из <a href="https://github.com/element-hq/ess-helm#kubernetes-single-node-setup-with-k3s">README ESS</a>.</p>
+              <p data-i18n="s2.helm">Потом дайте себе доступ к&nbsp;K3s и&nbsp;поставьте Helm — это ещё несколько коротких команд из&nbsp;<a href="https://github.com/element-hq/ess-helm#kubernetes-single-node-setup-with-k3s">README ESS</a>.</p>
             </div>
           </li>
           <li>
@@ -140,7 +140,7 @@ elementAdmin:
 matrixRTC:
   ingress:
     host: mrtc.example.org</code></pre></div>
-              <p data-i18n="s3.tls">Сертификаты можно выпустить через Let’s Encrypt. Как это настроить, описано в <a href="https://github.com/element-hq/ess-helm#certificates">README ESS</a>.</p>
+              <p data-i18n="s3.tls">Сертификаты можно выпустить через Let’s Encrypt. Как это настроить, описано в&nbsp;<a href="https://github.com/element-hq/ess-helm#certificates">README ESS</a>.</p>
             </div>
           </li>
           <li>
@@ -163,7 +163,7 @@ matrixRTC:
           <li>
             <div class="step">
               <h3 data-i18n="s6.t">Войдите из&nbsp;Iskra</h3>
-              <p data-i18n="s6.p">На&nbsp;экране входа введите свой домен, например <code>example.org</code>. Откроется страница входа вашего сервера. А&nbsp;чтобы проверить, что сервер видят другие, загляните в <a href="https://federationtester.matrix.org">Federation Tester</a>.</p>
+              <p data-i18n="s6.p">На&nbsp;экране входа введите свой домен, например <code>example.org</code>. Откроется страница входа вашего сервера. А&nbsp;чтобы проверить, что сервер видят другие, загляните в&nbsp;<a href="https://federationtester.matrix.org">Federation Tester</a>.</p>
             </div>
           </li>
         </ol>
@@ -171,7 +171,7 @@ matrixRTC:
           <div class="note-wrap">
             <div class="note">
               <svg class="icon" aria-hidden="true"><use href="assets/sprite.svg#i-info"/></svg>
-              <p data-i18n="note">Здесь самое главное, без подробностей. Команды иногда меняются, поэтому перед установкой сверьтесь с <a href="https://github.com/element-hq/ess-helm">README ESS Community</a>.</p>
+              <p data-i18n="note">Здесь самое главное, без подробностей. Команды иногда меняются, поэтому перед установкой сверьтесь с&nbsp;<a href="https://github.com/element-hq/ess-helm">README ESS Community</a>.</p>
             </div>
           </div>
         </div>
@@ -185,8 +185,8 @@ matrixRTC:
         </div>
         <ul class="rules">
           <li><h3 data-i18n="after.backup.t">Резервные копии</h3><p data-i18n="after.backup.p">Сохраняйте базу данных и&nbsp;загруженные файлы. Без копии сломанный диск унесёт всю переписку сервера.</p></li>
-          <li><h3 data-i18n="after.updates.t">Обновления</h3><p data-i18n="after.updates.p">Время от&nbsp;времени запускайте ту же команду <code>helm upgrade</code>: она подтянет свежие версии с&nbsp;исправлениями.</p></li>
-          <li><h3 data-i18n="after.signup.t">Регистрация для друзей</h3><p data-i18n="after.signup.p">Чтобы люди могли заводить аккаунты сами, подключите к&nbsp;серверу почту (SMTP). Или создавайте аккаунты той же командой.</p></li>
+          <li><h3 data-i18n="after.updates.t">Обновления</h3><p data-i18n="after.updates.p">Время от&nbsp;времени запускайте ту&nbsp;же&nbsp;команду <code>helm upgrade</code>: она подтянет свежие версии с&nbsp;исправлениями.</p></li>
+          <li><h3 data-i18n="after.signup.t">Регистрация для друзей</h3><p data-i18n="after.signup.p">Чтобы люди могли заводить аккаунты сами, подключите к&nbsp;серверу почту (SMTP). Или создавайте аккаунты той же&nbsp;командой.</p></li>
           <li><h3 data-i18n="after.other.t">Другие способы</h3><p data-i18n="after.other.p">Любите Ansible — есть <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy">matrix-docker-ansible-deploy</a> с&nbsp;мостами в&nbsp;другие мессенджеры. Хотите всё вручную — есть <a href="https://element-hq.github.io/synapse/latest/setup/installation.html">документация Synapse</a>.</p></li>
         </ul>
       </div>
@@ -194,7 +194,7 @@ matrixRTC:
 
     <section class="section download cta">
       <div class="wrap">
-        <h2 data-i18n="cta.title">Не хочется возиться</h2>
+        <h2 data-i18n="cta.title">Не&nbsp;хочется возиться</h2>
         <p data-i18n="cta.p">Это нормально. Можно начать с&nbsp;готового сервера, а&nbsp;свой поднять потом.</p>
         <div class="hero__cta">
           <a class="button button--primary" href="matrix.html#servers" data-i18n="cta.servers">Выбрать готовый сервер</a>
@@ -246,54 +246,54 @@ matrixRTC:
         'meta.description': 'How to run your own Matrix server for Iskra: what you’ll need, which server to pick and how to install it step by step.',
         'nav.download': 'Download',
         'hero.title': 'Your own Matrix server',
-        'hero.intro': 'On your own server, you decide everything: who talks there, where the data lives and what the rules are. You’ll need a domain, a small server and an evening.',
-        'need.title': 'A little hardware and a little patience',
-        'need.domain.t': 'A domain of your own',
-        'need.domain.p': 'It becomes part of every address: <code>@you:your-domain.com</code>. You can’t change it later, so pick one you’ll keep.',
-        'need.vps.t': 'A Linux server',
-        'need.vps.p': 'A cheap VPS will do: 2 cores and 2 GB of memory or more. It needs a permanent internet address and open ports 80 and 443.',
-        'need.skills.t': 'A bit of command line',
-        'need.skills.p': 'You should be able to log in over SSH and run a couple of commands. The guide covers the rest.',
-        'choose.title': 'Go with Synapse',
-        'choose.p': 'Iskra receives messages over native sliding sync (MSC4186). It’s what makes the chat list open instantly, and not every server supports it yet.',
+        'hero.intro': 'On&nbsp;your own server, you decide everything: who talks there, where the data lives and what the rules are. You’ll need a&nbsp;domain, a&nbsp;small server and an&nbsp;evening.',
+        'need.title': 'A&nbsp;little hardware and a&nbsp;little patience',
+        'need.domain.t': 'A&nbsp;domain of&nbsp;your own',
+        'need.domain.p': 'It&nbsp;becomes part of&nbsp;every address: <code>@you:your-domain.com</code>. You can’t change it&nbsp;later, so&nbsp;pick one you’ll keep.',
+        'need.vps.t': 'A&nbsp;Linux server',
+        'need.vps.p': 'A&nbsp;cheap VPS will do: 2 cores and 2 GB&nbsp;of&nbsp;memory or&nbsp;more. It&nbsp;needs a&nbsp;permanent internet address and open ports 80 and 443.',
+        'need.skills.t': 'A&nbsp;bit of&nbsp;command line',
+        'need.skills.p': 'You should be&nbsp;able to&nbsp;log in&nbsp;over SSH and run a&nbsp;couple of&nbsp;commands. The guide covers the rest.',
+        'choose.title': 'Go&nbsp;with Synapse',
+        'choose.p': 'Iskra receives messages over native sliding sync (MSC4186). It’s what makes the chat list open instantly, and not every server supports it&nbsp;yet.',
         'choose.recommended': 'Recommended',
-        'choose.synapse': 'The main Matrix server, built by Element. Sliding sync has been on by default since version 1.114, so any recent version will do.',
-        'choose.rust': 'Lightweight servers written in Rust that run on very modest hardware. Their sliding sync support is still being worked on, so some things in Iskra may not work.',
+        'choose.synapse': 'The main Matrix server, built by&nbsp;Element. Sliding sync has been on&nbsp;by&nbsp;default since version 1.114, so&nbsp;any recent version will do.',
+        'choose.rust': 'Lightweight servers written in&nbsp;Rust that run on&nbsp;very modest hardware. Their sliding sync support is&nbsp;still being worked on, so&nbsp;some things in&nbsp;Iskra may not work.',
         'how.title': 'The easy way: ESS Community',
-        'how.p': 'A free bundle from Element: Synapse, sign-in through Matrix Authentication Service, a web client and an admin panel, all installed together. Here are the short steps.',
-        's1.t': 'Set up your domain',
-        's1.p': 'Point the domain itself and five subdomains at your server’s address (A records):',
+        'how.p': 'A&nbsp;free bundle from Element: Synapse, sign-in through Matrix Authentication Service, a&nbsp;web client and an&nbsp;admin panel, all installed together. Here are the short steps.',
+        's1.t': 'Set up&nbsp;your domain',
+        's1.p': 'Point the domain itself and five subdomains at&nbsp;your server’s address (A&nbsp;records):',
         's1.hosts': 'example.org          — your Matrix address: @you:example.org\nmatrix.example.org   — Synapse\naccount.example.org  — sign-in and accounts\nchat.example.org     — web client\nadmin.example.org    — admin panel\nmrtc.example.org     — calls',
         's1.ports': 'Open ports 80 and 443 (TCP), plus 30001 (TCP) and 30002 (UDP) for calls.',
         's2.t': 'Install K3s and Helm',
-        's2.p': 'K3s is a lightweight Kubernetes that your server will run in. It installs with one command:',
-        's2.helm': 'Then give yourself access to K3s and install Helm — a few more short commands from the <a href="https://github.com/element-hq/ess-helm#kubernetes-single-node-setup-with-k3s">ESS README</a>.',
+        's2.p': 'K3s is&nbsp;a&nbsp;lightweight Kubernetes that your server will run in. It&nbsp;installs with one command:',
+        's2.helm': 'Then give yourself access to&nbsp;K3s and install Helm — a&nbsp;few more short commands from the <a href="https://github.com/element-hq/ess-helm#kubernetes-single-node-setup-with-k3s">ESS README</a>.',
         's3.t': 'Describe your addresses',
-        's3.p': 'Create a <code>~/ess-config-values</code> folder with a <code>hostnames.yaml</code> file in it. Put your domain in place of example.org:',
-        's3.tls': 'Certificates can come from Let’s Encrypt. How to set that up is in the <a href="https://github.com/element-hq/ess-helm#certificates">ESS README</a>.',
+        's3.p': 'Create a&nbsp;<code>~/ess-config-values</code> folder with a&nbsp;<code>hostnames.yaml</code> file in&nbsp;it. Put your domain in&nbsp;place of&nbsp;example.org:',
+        's3.tls': 'Certificates can come from Let’s Encrypt. How to&nbsp;set that up&nbsp;is&nbsp;in&nbsp;the <a href="https://github.com/element-hq/ess-helm#certificates">ESS README</a>.',
         's4.t': 'Install the server',
-        's4.p': 'Helm downloads and starts everything it needs. It takes a few minutes:',
+        's4.p': 'Helm downloads and starts everything it&nbsp;needs. It&nbsp;takes a&nbsp;few minutes:',
         's5.t': 'Create the first account',
-        's5.p': 'Sign-ups are off on a new server, so the first account is created with a command. It will ask for a username and a password:',
-        's6.t': 'Sign in from Iskra',
-        's6.p': 'On the sign-in screen, enter your domain, for example <code>example.org</code>. Your server’s sign-in page will open. To check that other servers can see yours, try the <a href="https://federationtester.matrix.org">Federation Tester</a>.',
-        'note': 'This is the short version. Commands change from time to time, so check the <a href="https://github.com/element-hq/ess-helm">ESS Community README</a> before you install.',
-        'after.title': 'Your server is up. What else to do',
+        's5.p': 'Sign-ups are off on&nbsp;a&nbsp;new server, so&nbsp;the first account is&nbsp;created with a&nbsp;command. It&nbsp;will ask for a&nbsp;username and a&nbsp;password:',
+        's6.t': 'Sign in&nbsp;from Iskra',
+        's6.p': 'On&nbsp;the sign-in screen, enter your domain, for example <code>example.org</code>. Your server’s sign-in page will open. To&nbsp;check that other servers can see yours, try the <a href="https://federationtester.matrix.org">Federation Tester</a>.',
+        'note': 'This is&nbsp;the short version. Commands change from time to&nbsp;time, so&nbsp;check the <a href="https://github.com/element-hq/ess-helm">ESS Community README</a> before you install.',
+        'after.title': 'Your server is&nbsp;up. What else to&nbsp;do',
         'after.backup.t': 'Backups',
-        'after.backup.p': 'Keep copies of the database and uploaded files. Without a backup, one broken disk takes every conversation on the server with it.',
+        'after.backup.p': 'Keep copies of&nbsp;the database and uploaded files. Without a&nbsp;backup, one broken disk takes every conversation on&nbsp;the server with it.',
         'after.updates.t': 'Updates',
-        'after.updates.p': 'Every now and then, run the same <code>helm upgrade</code> command. It pulls in fresh versions with fixes.',
+        'after.updates.p': 'Every now and then, run the same <code>helm upgrade</code> command. It&nbsp;pulls in&nbsp;fresh versions with fixes.',
         'after.signup.t': 'Sign-ups for friends',
-        'after.signup.p': 'To let people create accounts themselves, connect the server to email (SMTP). Or keep creating accounts with the same command.',
+        'after.signup.p': 'To&nbsp;let people create accounts themselves, connect the server to&nbsp;email (SMTP). Or&nbsp;keep creating accounts with the same command.',
         'after.other.t': 'Other ways',
-        'after.other.p': 'If you like Ansible, there’s <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy">matrix-docker-ansible-deploy</a>, with bridges to other messengers. If you’d rather do it all by hand, there’s the <a href="https://element-hq.github.io/synapse/latest/setup/installation.html">Synapse documentation</a>.',
+        'after.other.p': 'If&nbsp;you like Ansible, there’s <a href="https://github.com/spantaleev/matrix-docker-ansible-deploy">matrix-docker-ansible-deploy</a>, with bridges to&nbsp;other messengers. If&nbsp;you’d rather do&nbsp;it&nbsp;all by&nbsp;hand, there’s the <a href="https://element-hq.github.io/synapse/latest/setup/installation.html">Synapse documentation</a>.',
         'cta.title': 'Rather not bother',
-        'cta.p': 'That’s fine. Start on a ready-made server and set up your own later.',
-        'cta.servers': 'Pick a ready-made server',
+        'cta.p': 'That’s fine. Start on&nbsp;a&nbsp;ready-made server and set up&nbsp;your own later.',
+        'cta.servers': 'Pick a&nbsp;ready-made server',
         'cta.download': 'Download Iskra',
         'footer.links': 'Links',
         'footer.home': 'Home',
-        'footer.matrix': 'What is Matrix',
+        'footer.matrix': 'What is&nbsp;Matrix',
         'footer.license': 'Licence',
       },
     });
