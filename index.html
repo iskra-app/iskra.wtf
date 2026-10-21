@@ -32,6 +32,7 @@
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-variable.woff2" crossorigin>
   <link rel="stylesheet" href="assets/fonts/inter.css">
   <link rel="stylesheet" href="assets/site.css">
+  <noscript><style>.hero.is-waiting .hero__line, .hero.is-waiting .hero__sub, .hero.is-waiting .hero__foot { opacity: 1; }</style></noscript>
 </head>
 <body>
 
@@ -44,150 +45,169 @@
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="appicon" id="appicon" role="img" aria-label="Иконка Iskra" data-i18n-aria="hero.icon">
-        <img class="is-on" src="assets/icons/spark.png" alt="" width="640" height="640">
-      </div>
-      <h1>Iskra</h1>
-      <p class="hero__sub" data-i18n="hero.sub">Пиши искренне.</p>
-      <p class="hero__body" data-i18n="hero.body">Мессенджер для iPhone, iPad, Mac, Android и&nbsp;веба. Переписывайтесь как привыкли со&nbsp;сквозным шифрованием. Никакой слежки, исходный код открыт.</p>
-      <div class="hero__cta">
-        <a class="button button--primary" id="get" href="#download"><span id="get-label" data-i18n="nav.download">Скачать</span></a>
-        <a class="button button--plain" href="https://web.iskra.wtf" target="_blank" rel="noopener" data-i18n="hero.web">Открыть в&nbsp;браузере</a>
+    <section class="hero is-waiting" id="hero">
+      <div class="wrap">
+        <h1 class="hero__title">
+          <span class="hero__line"><span class="appicon" id="appicon" role="img" aria-label="Иконка Iskra" data-i18n-aria="hero.icon"><img class="is-on" src="assets/icons/spark.png" alt="" width="640" height="640"></span> <span class="hero__name">Iskra.</span></span><br>
+          <span class="hero__sub" data-i18n="hero.sub">Пиши искренне.</span>
+        </h1>
+        <div class="hero__foot">
+          <p class="hero__body" data-i18n="hero.body">Мессенджер на&nbsp;Matrix для&nbsp;iPhone, iPad, Mac, Android и&nbsp;веба. Переписывайтесь как&nbsp;привыкли, со&nbsp;сквозным шифрованием. Никакой слежки, исходный код открыт.</p>
+          <div class="hero__cta">
+            <a class="button button--primary" id="get" href="#download"><span id="get-label" data-i18n="nav.download">Скачать</span></a>
+            <a class="button button--plain" href="https://web.iskra.wtf" target="_blank" rel="noopener" data-i18n="hero.web">Открыть в&nbsp;браузере</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="features" data-nav-solid>
+    <section class="section" id="features" data-nav-solid data-accent="yellow">
       <div class="wrap">
-        <div class="head">
-          <h2 data-i18n="features.title">Всё, что нужно для разговора, и&nbsp;ничего лишнего</h2>
-          <p data-i18n="features.p">Iskra работает на&nbsp;Matrix — открытом протоколе, который развивает сообщество. <a class="more" href="matrix">Что такое Matrix</a></p>
-        </div>
-        <div class="cards">
-          <article class="card">
-            <span class="tile" style="--c:var(--red)"><svg class="icon"><use href="assets/sprite.svg#i-chat"/></svg></span>
-            <h3 data-i18n="f.chats.t">Привычные чаты</h3>
-            <p data-i18n="f.chats.p">Личные чаты, группы и&nbsp;пространства. Ответы, правки, реакции, опросы, файлы, голосовые и&nbsp;видео в&nbsp;кружке.</p>
-          </article>
-          <article class="card">
-            <span class="tile" style="--c:var(--orange)"><svg class="icon"><use href="assets/sprite.svg#i-lock"/></svg></span>
-            <h3 data-i18n="f.e2ee.t">Сквозное шифрование</h3>
-            <p data-i18n="f.e2ee.p">Устройства подтверждаются, ключи хранятся в&nbsp;резервной копии. Сервер видит только зашифрованные данные.</p>
-          </article>
-          <article class="card">
-            <span class="tile" style="--c:var(--yellow);--ink:#000"><svg class="icon"><use href="assets/sprite.svg#i-bell"/></svg></span>
-            <h3 data-i18n="f.push.t">Уведомления</h3>
-            <p data-i18n="f.push.p">Расшифровываются на&nbsp;телефоне: вы&nbsp;видите текст, а&nbsp;сервер — нет.</p>
-          </article>
-          <article class="card">
-            <span class="tile" style="--c:var(--green)"><svg class="icon"><use href="assets/sprite.svg#i-users"/></svg></span>
-            <h3 data-i18n="f.accounts.t">Несколько аккаунтов</h3>
-            <p data-i18n="f.accounts.p">Рабочий, личный и&nbsp;ещё один для проекта на&nbsp;выходных. Все на&nbsp;одном устройстве, переключаются одним касанием.</p>
-          </article>
-          <article class="card">
-            <span class="tile" style="--c:var(--cyan)"><svg class="icon"><use href="assets/sprite.svg#i-widgets"/></svg></span>
-            <h3 data-i18n="f.widgets.t">Виджеты, Siri и&nbsp;Команды</h3>
-            <p data-i18n="f.widgets.p">Виджеты на&nbsp;экране «Домой», Live Activities и&nbsp;быстрые действия. Многое можно сделать, не&nbsp;открывая приложение.</p>
-          </article>
-          <article class="card">
-            <span class="tile" style="--c:var(--blue)"><svg class="icon"><use href="assets/sprite.svg#i-globe"/></svg></span>
-            <h3 data-i18n="f.languages.t">Семь языков</h3>
-            <p data-i18n="f.languages.p">Русский, английский, немецкий, испанский, французский, японский и&nbsp;китайский.</p>
-          </article>
-          <article class="card">
-            <span class="tile" style="--c:var(--violet)"><svg class="icon"><use href="assets/sprite.svg#i-bridge"/></svg></span>
-            <h3 data-i18n="f.bridge.t">Подключение через мост</h3>
-            <p data-i18n="f.bridge.p">Сеть не&nbsp;видит, с&nbsp;каким сервером вы&nbsp;общаетесь. И&nbsp;выручит, если напрямую не&nbsp;пускают. <a href="https://github.com/iskra-app/iskra-bridge">Как это работает</a></p>
-          </article>
-          <article class="card">
-            <div class="swatches" aria-hidden="true">
-              <i style="--c:var(--red)"></i><i style="--c:var(--orange)"></i><i style="--c:var(--yellow)"></i><i style="--c:var(--green)"></i><i style="--c:var(--cyan)"></i><i style="--c:var(--blue)"></i><i style="--c:var(--violet)"></i><i style="--c:var(--color-text)"></i>
+        <h2 class="title" data-reveal data-i18n="features.title">Всё&nbsp;для&nbsp;разговора, ничего лишнего</h2>
+
+        <div class="split">
+          <div class="split__text" data-reveal>
+            <p class="statement">
+              <span data-i18n="st.a">Чаты</span>
+              <span class="slot slot--bubble" aria-hidden="true"><span class="slot__in"><i></i><i></i><i></i></span></span><span data-i18n="st.b">, группы и&nbsp;пространства&nbsp;— как&nbsp;вы&nbsp;привыкли. Шифрование</span>
+              <span class="slot slot--lock" aria-hidden="true"><span class="slot__in"><svg class="icon"><use href="assets/sprite.svg#i-lock"/></svg></span></span>
+              <span data-i18n="st.c">сквозное, а&nbsp;интерфейс&nbsp;— в&nbsp;вашем цвете</span>
+              <span class="slot slot--dots" aria-hidden="true"><span class="slot__in"><i data-accent="red"></i><i data-accent="orange"></i><i data-accent="yellow"></i><i data-accent="green"></i><i data-accent="cyan"></i><i data-accent="blue"></i><i data-accent="violet"></i><i data-accent="mono"></i></span></span><span>.</span>
+            </p>
+            <p class="note-line" data-i18n="features.p">Iskra работает на&nbsp;Matrix&nbsp;— открытом протоколе, который развивает сообщество. <a class="more" href="matrix">Что&nbsp;такое Matrix</a></p>
+          </div>
+
+          <figure class="chat" data-ui data-reveal id="chat">
+            <div class="chat__window">
+              <div class="chat__head">
+                <span class="chat__avatar" aria-hidden="true">М</span>
+                <span class="chat__who"><b data-i18n="chat.name">Маша</b><small><svg class="icon" aria-hidden="true"><use href="assets/sprite.svg#i-lock"/></svg><span data-i18n="chat.e2ee">Сквозное шифрование</span></small></span>
+              </div>
+              <ol class="chat__log">
+                <li class="in" data-i18n="chat.m1">Где встречаемся в&nbsp;субботу?</li>
+                <li class="out" data-i18n="chat.m2">У&nbsp;фонтана в&nbsp;шесть. Возьму плёнку</li>
+                <li class="in" data-i18n="chat.m3">Договорились, до&nbsp;встречи</li>
+                <li class="out" data-i18n="chat.m4">Не&nbsp;опаздывай!</li>
+              </ol>
             </div>
-            <h3 data-i18n="f.colors.t">Семь цветов и&nbsp;моно</h3>
-            <p data-i18n="f.colors.p">Выберите свой цвет. Им&nbsp;можно раскрасить весь интерфейс, а&nbsp;можно оставить всё строгим чёрно-белым.</p>
-          </article>
+            <figcaption>
+              <span data-i18n="chat.pick">Выберите цвет:</span>
+              <span class="picker" role="group" aria-label="Цвет интерфейса" data-i18n-aria="chat.pickAria">
+                <button type="button" data-accent="red" aria-label="Красный" data-i18n-aria="c.red"></button>
+                <button type="button" data-accent="orange" aria-label="Оранжевый" data-i18n-aria="c.orange"></button>
+                <button type="button" data-accent="yellow" aria-label="Жёлтый" data-i18n-aria="c.yellow" aria-pressed="true"></button>
+                <button type="button" data-accent="green" aria-label="Зелёный" data-i18n-aria="c.green"></button>
+                <button type="button" data-accent="cyan" aria-label="Голубой" data-i18n-aria="c.cyan"></button>
+                <button type="button" data-accent="blue" aria-label="Синий" data-i18n-aria="c.blue"></button>
+                <button type="button" data-accent="violet" aria-label="Фиолетовый" data-i18n-aria="c.violet"></button>
+                <button type="button" data-accent="mono" aria-label="Чёрно-белый" data-i18n-aria="c.mono"></button>
+              </span>
+            </figcaption>
+          </figure>
         </div>
+
+        <ul class="features" data-reveal>
+          <li><h3 data-i18n="f.chats.t">Привычные чаты</h3><p data-i18n="f.chats.p">Личные чаты, группы и&nbsp;пространства. Ответы, правки, реакции, опросы, файлы, голосовые и&nbsp;видео в&nbsp;кружке.</p></li>
+          <li><h3 data-i18n="f.e2ee.t">Сквозное шифрование</h3><p data-i18n="f.e2ee.p">Устройства подтверждаются, ключи хранятся в&nbsp;резервной копии. Сервер видит только зашифрованные данные.</p></li>
+          <li><h3 data-i18n="f.push.t">Уведомления</h3><p data-i18n="f.push.p">Расшифровываются на&nbsp;телефоне: вы&nbsp;видите текст, а&nbsp;сервер&nbsp;— нет.</p></li>
+          <li><h3 data-i18n="f.accounts.t">Несколько аккаунтов</h3><p data-i18n="f.accounts.p">Рабочий, личный и&nbsp;ещё&nbsp;один для&nbsp;проекта на&nbsp;выходных. Все&nbsp;на&nbsp;одном устройстве, переключаются одним касанием.</p></li>
+          <li><h3 data-i18n="f.widgets.t">Виджеты, Siri и&nbsp;Команды</h3><p data-i18n="f.widgets.p">Виджеты на&nbsp;экране «Домой», Live Activities и&nbsp;быстрые действия. Многое можно сделать, не&nbsp;открывая приложение.</p></li>
+          <li><h3 data-i18n="f.languages.t">Семь языков</h3><p data-i18n="f.languages.p">Русский, английский, немецкий, испанский, французский, японский и&nbsp;китайский.</p></li>
+          <li><h3 data-i18n="f.bridge.t">Подключение через мост</h3><p data-i18n="f.bridge.p">Сеть не&nbsp;видит, с&nbsp;каким сервером вы&nbsp;общаетесь. И&nbsp;выручит, если напрямую не&nbsp;пускают. <a href="https://github.com/iskra-app/iskra-bridge">Как&nbsp;это&nbsp;работает</a></p></li>
+          <li><h3 data-i18n="f.colors.t">Семь цветов и&nbsp;моно</h3><p data-i18n="f.colors.p">Выберите свой цвет. Им&nbsp;можно раскрасить весь интерфейс, а&nbsp;можно оставить всё&nbsp;строгим чёрно-белым.</p></li>
+        </ul>
       </div>
     </section>
 
-    <section class="section" id="privacy">
+    <section class="section section--tone" id="privacy">
       <div class="wrap">
-        <div class="head">
-          <h2 data-i18n="privacy.title">Ваши разговоры остаются вашими</h2>
-          <p data-i18n="privacy.p">Мы&nbsp;не&nbsp;собираем ваши данные. Вот что Iskra делает, чтобы они не&nbsp;достались никому другому.</p>
+        <div class="privacy__head" data-reveal>
+          <h2 class="title" data-i18n="privacy.title">Ваши разговоры остаются вашими</h2>
+          <p class="lead" data-i18n="privacy.p">Мы&nbsp;не&nbsp;собираем ваши данные. Вот что&nbsp;Iskra делает, чтобы они не&nbsp;достались никому другому.</p>
         </div>
-        <ul class="rules">
+        <p class="statement litlist" id="litlist" data-reveal>
+          <span class="litlist__lead" data-i18n="lit.lead">Остаются у&nbsp;вас:</span>
+          <span class="lit" data-i18n="lit.1">ключи шифрования</span>, <span class="lit" data-i18n="lit.2">токены входа</span>, <span class="lit" data-i18n="lit.3">поисковые запросы</span>, <span class="lit" data-i18n="lit.4">геометки фотографий</span> <span data-i18n="lit.and">и</span> <span class="lit" data-i18n="lit.5">модель камеры</span>.
+        </p>
+        <ul class="facts" data-reveal>
           <li><h3 data-i18n="p.keys.t">Токены и&nbsp;ключи</h3><p data-i18n="p.keys.p">Хранятся только в&nbsp;Связке ключей на&nbsp;устройстве. Они никуда не&nbsp;синхронизируются, даже в&nbsp;резервные копии.</p></li>
           <li><h3 data-i18n="p.messages.t">Сообщения и&nbsp;поиск</h3><p data-i18n="p.messages.p">Сообщения на&nbsp;диске зашифрованы. Поиск работает на&nbsp;самом устройстве, запросы никуда не&nbsp;отправляются.</p></li>
-          <li><h3 data-i18n="p.media.t">Фото и&nbsp;видео</h3><p data-i18n="p.media.p">По&nbsp;умолчанию отправляются без метаданных: без геометок и&nbsp;без модели камеры.</p></li>
+          <li><h3 data-i18n="p.media.t">Фото и&nbsp;видео</h3><p data-i18n="p.media.p">По&nbsp;умолчанию отправляются без&nbsp;метаданных: без&nbsp;геометок и&nbsp;без&nbsp;модели камеры.</p></li>
           <li><h3 data-i18n="p.logs.t">Логи</h3><p data-i18n="p.logs.p">В&nbsp;логи не&nbsp;попадают ни&nbsp;сообщения, ни&nbsp;токены, ни&nbsp;пароли.</p></li>
-          <li><h3 data-i18n="p.crypto.t">Криптография</h3><p data-i18n="p.crypto.p">Всё шифрование берётся из&nbsp;<a href="https://github.com/matrix-org/matrix-rust-sdk">matrix-rust-sdk</a>. Мы&nbsp;ничего в&nbsp;нём не&nbsp;переписывали сами.</p></li>
+          <li><h3 data-i18n="p.crypto.t">Криптография</h3><p data-i18n="p.crypto.p">Всё&nbsp;шифрование берётся из&nbsp;<a href="https://github.com/matrix-org/matrix-rust-sdk">matrix-rust-sdk</a>. Мы&nbsp;ничего в&nbsp;нём не&nbsp;переписывали сами.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="section" id="open-source">
       <div class="wrap oss">
-        <div class="oss__text">
-          <h2 data-i18n="oss.title">Весь код открыт, лицензия GPL-3.0</h2>
-          <p data-i18n="oss.p">Код Iskra можно прочитать, собрать самостоятельно или предложить в&nbsp;него правку. Приложение ещё в&nbsp;разработке, и&nbsp;следить за&nbsp;ним удобнее всего на&nbsp;GitHub.</p>
+        <dl class="oss__facts" data-reveal>
+          <div><dt data-i18n="oss.f.license">Лицензия</dt><dd>GPL-3.0</dd></div>
+          <div><dt data-i18n="oss.f.crypto">Шифрование</dt><dd>matrix-rust-sdk</dd></div>
+          <div><dt data-i18n="oss.f.code">Код</dt><dd><a href="https://github.com/iskra-app">github.com/iskra-app</a></dd></div>
+        </dl>
+        <div class="oss__text" data-reveal>
+          <h2 class="title" data-i18n="oss.title">Весь код открыт, лицензия GPL-3.0</h2>
+          <p class="oss__p"><span data-i18n="oss.p">Код Iskra можно прочитать, собрать самостоятельно или&nbsp;предложить в&nbsp;него правку. Приложение ещё&nbsp;в&nbsp;разработке, и&nbsp;следить за&nbsp;ним удобнее всего на&nbsp;GitHub.</span></p>
           <div class="oss__links">
-            <a class="button button--plain" href="https://github.com/iskra-app"><svg class="logo" aria-hidden="true"><use href="assets/sprite.svg#l-github"/></svg><span data-i18n="oss.github">Iskra на&nbsp;GitHub</span></a>
+            <a class="button button--primary" href="https://github.com/iskra-app"><svg class="logo" aria-hidden="true"><use href="assets/sprite.svg#l-github"/></svg><span data-i18n="oss.github">Iskra на&nbsp;GitHub</span></a>
             <a class="button button--plain" href="https://github.com/iskra-app/iskra/blob/main/LICENSE" data-i18n="oss.license">Текст лицензии</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section download" id="download">
+    <section class="section invert download" id="download">
       <div class="wrap">
-        <div class="head">
-          <h2 data-i18n="dl.title">Попробуйте Iskra</h2>
-          <p data-i18n="dl.p">Приложения для iPhone, iPad и&nbsp;Mac появятся в&nbsp;App Store, когда будут готовы. Веб-версия уже работает в&nbsp;браузере.</p>
-        </div>
-        <div class="platforms" id="platforms">
+        <h2 class="display" data-reveal data-i18n="dl.title">Попробуйте Iskra</h2>
+        <div class="platforms" id="platforms" data-reveal>
           <div class="platform" data-platform="ios">
-            <svg class="icon"><use href="assets/sprite.svg#i-phone"/></svg>
             <h3 data-i18n="dl.ios.t">iPhone и&nbsp;iPad</h3>
-            <p class="req" data-i18n="dl.ios.req">iOS и&nbsp;iPadOS 18 или новее</p>
+            <p class="req" data-i18n="dl.ios.req">iOS и&nbsp;iPadOS 18 или&nbsp;новее</p>
             <p class="act"></p>
           </div>
           <div class="platform" data-platform="mac">
-            <svg class="icon"><use href="assets/sprite.svg#i-laptop"/></svg>
             <h3>Mac</h3>
-            <p class="req" data-i18n="dl.mac.req">macOS 15 или новее</p>
+            <p class="req" data-i18n="dl.mac.req">macOS 15 или&nbsp;новее</p>
             <p class="act"></p>
           </div>
           <div class="platform" data-platform="android">
-            <svg class="icon"><use href="assets/sprite.svg#i-android"/></svg>
             <h3>Android</h3>
             <p class="req" data-i18n="dl.android.req">Файл APK на&nbsp;GitHub</p>
             <p class="act"></p>
           </div>
           <div class="platform" data-platform="web">
-            <svg class="icon"><use href="assets/sprite.svg#i-browser"/></svg>
             <h3 data-i18n="dl.web.t">Браузер</h3>
             <p class="req" data-i18n="dl.web.req">Ничего не&nbsp;нужно устанавливать</p>
             <p class="act"><a class="more" href="https://web.iskra.wtf" target="_blank" rel="noopener" data-i18n="dl.web.act">Открыть web.iskra.wtf</a></p>
           </div>
         </div>
+        <div class="download__foot" data-reveal>
+          <p data-i18n="dl.p">Приложения для&nbsp;iPhone, iPad и&nbsp;Mac появятся в&nbsp;App Store, когда будут готовы. Веб-версия уже&nbsp;работает в&nbsp;браузере.</p>
+          <a class="button button--primary button--large" href="https://web.iskra.wtf" target="_blank" rel="noopener" data-i18n="hero.web">Открыть в&nbsp;браузере</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="wrap">
-      <p>Iskra App</p>
-      <nav aria-label="Ссылки" data-i18n-aria="footer.links">
-        <a href="matrix" data-i18n="footer.matrix">Что такое Matrix</a>
-        <a href="server" data-i18n="footer.server">Свой сервер</a>
-        <a href="https://github.com/iskra-app">GitHub</a>
-        <a href="privacy" data-i18n="footer.privacy">Конфиденциальность</a>
-        <a href="terms" data-i18n="footer.terms">Условия</a>
-      </nav>
-      <div class="lang" role="group" aria-label="Язык / Language">
-        <button type="button" data-lang="ru" lang="ru">Русский</button>
-        <button type="button" data-lang="en" lang="en">English</button>
+      <div class="footer__top">
+        <a class="brand" href="./"><svg viewBox="0 0 747 731" aria-hidden="true"><use href="assets/sprite.svg#spark"/></svg>Iskra</a>
+        <a href="#" data-i18n="footer.top">Наверх</a>
+      </div>
+      <a class="footer__big" href="https://github.com/iskra-app">github.com/iskra-app</a>
+      <div class="footer__meta">
+        <nav aria-label="Ссылки" data-i18n-aria="footer.links">
+          <a href="matrix" data-i18n="footer.matrix">Что&nbsp;такое Matrix</a>
+          <a href="server" data-i18n="footer.server">Свой сервер</a>
+          <a href="privacy" data-i18n="footer.privacy">Конфиденциальность</a>
+          <a href="terms" data-i18n="footer.terms">Условия</a>
+        </nav>
+        <div class="lang" role="group" aria-label="Язык / Language">
+          <button type="button" data-lang="ru" lang="ru">Русский</button>
+          <button type="button" data-lang="en" lang="en">English</button>
+        </div>
       </div>
     </div>
   </footer>
@@ -207,61 +227,79 @@
     // ── Тексты ──
     // Русские лежат в разметке и читаются оттуда; здесь — английские и те, что собирает скрипт.
     const EN = {
-      'meta.title': 'Iskra — a Matrix messenger for iPhone, iPad and Mac',
-      'meta.description': 'Iskra is a calm Matrix messenger for iPhone, iPad and Mac. End-to-end encryption and open source under GPL-3.0. In development.',
+      'meta.title': 'Iskra\u00a0— a\u00a0Matrix messenger for\u00a0iPhone, iPad and\u00a0Mac',
+      'meta.description': 'Iskra is\u00a0a\u00a0calm Matrix messenger for\u00a0iPhone, iPad and\u00a0Mac. End-to-end encryption and\u00a0open source under GPL-3.0. In\u00a0development.',
       'nav.download': 'Download',
       'hero.icon': 'Iskra app icon',
-      'hero.sub': 'Write with a spark.',
-      'hero.body': 'A&nbsp;messenger for iPhone, iPad, Mac, Android and the web. Chat the familiar way, with end-to-end encryption. No tracking, the source code is open.',
+      'hero.sub': 'Text with a&nbsp;spark.',
+      'hero.body': 'A&nbsp;Matrix messenger for&nbsp;iPhone, iPad, Mac, Android and&nbsp;the&nbsp;web. Chat the&nbsp;familiar way, with end-to-end encryption. No&nbsp;tracking, the&nbsp;source code is&nbsp;open.',
       'hero.web': 'Open in&nbsp;browser',
-      'features.title': 'Everything a&nbsp;conversation needs, and nothing it&nbsp;doesn’t',
+      'features.title': 'All a&nbsp;conversation needs, nothing more',
+      'st.a': 'Chats',
+      'st.b': ', groups and&nbsp;spaces, the&nbsp;way you’re used to. Encryption',
+      'st.c': 'end to&nbsp;end, and&nbsp;the&nbsp;interface in&nbsp;your colour',
+      'chat.name': 'Masha',
+      'chat.e2ee': 'End-to-end encrypted',
+      'chat.m1': 'Where are we&nbsp;meeting on&nbsp;Saturday?',
+      'chat.m2': 'By&nbsp;the&nbsp;fountain at&nbsp;six. I’ll bring film',
+      'chat.m3': 'Deal, see you&nbsp;there',
+      'chat.m4': 'Don’t be&nbsp;late!',
+      'chat.pick': 'Pick a&nbsp;colour:',
+      'chat.pickAria': 'Interface colour',
+      'c.red': 'Red', 'c.orange': 'Orange', 'c.yellow': 'Yellow', 'c.green': 'Green',
+      'c.cyan': 'Cyan', 'c.blue': 'Blue', 'c.violet': 'Violet', 'c.mono': 'Black and\u00a0white',
       'features.p': 'Iskra runs on&nbsp;Matrix, an&nbsp;open protocol the community builds. <a class="more" href="matrix">What is&nbsp;Matrix</a>',
       'f.chats.t': 'Familiar chats',
-      'f.chats.p': 'Direct chats, groups and spaces. Replies, edits, reactions, polls, files, voice messages and round video notes.',
+      'f.chats.p': 'Direct chats, groups and&nbsp;spaces. Replies, edits, reactions, polls, files, voice messages and&nbsp;round video notes.',
       'f.e2ee.t': 'End-to-end encryption',
-      'f.e2ee.p': 'Devices are verified and keys are backed up. The server only ever sees encrypted data.',
+      'f.e2ee.p': 'Devices are verified and&nbsp;keys are backed up. The&nbsp;server only ever sees encrypted data.',
       'f.push.t': 'Notifications',
-      'f.push.p': 'Decrypted on&nbsp;your phone: you see the message, the server doesn’t.',
+      'f.push.p': 'Decrypted on&nbsp;your phone: you&nbsp;see the&nbsp;message, the&nbsp;server doesn’t.',
       'f.accounts.t': 'Several accounts',
-      'f.accounts.p': 'Work, personal and one for the weekend project. All on&nbsp;one device, one tap apart.',
-      'f.widgets.t': 'Widgets, Siri and Shortcuts',
-      'f.widgets.p': 'Home Screen widgets, Live Activities and quick actions. Plenty gets done without opening the app.',
+      'f.accounts.p': 'Work, personal and&nbsp;one for&nbsp;the&nbsp;weekend project. All on&nbsp;one device, one tap apart.',
+      'f.widgets.t': 'Widgets, Siri and&nbsp;Shortcuts',
+      'f.widgets.p': 'Home Screen widgets, Live Activities and&nbsp;quick actions. Plenty gets done without opening the&nbsp;app.',
       'f.languages.t': 'Seven languages',
-      'f.languages.p': 'Russian, English, German, Spanish, French, Japanese and Chinese.',
+      'f.languages.p': 'Russian, English, German, Spanish, French, Japanese and&nbsp;Chinese.',
       'f.bridge.t': 'Connect through a&nbsp;bridge',
       'f.bridge.p': 'Your network can’t see which server you talk to. It&nbsp;also helps when a&nbsp;direct connection is&nbsp;blocked. <a href="https://github.com/iskra-app/iskra-bridge">How it&nbsp;works</a>',
-      'f.colors.t': 'Seven colours and mono',
-      'f.colors.p': 'Pick your colour. Paint the whole interface with it, or&nbsp;keep everything strictly black and white.',
+      'f.colors.t': 'Seven colours and&nbsp;mono',
+      'f.colors.p': 'Pick your colour. Paint the&nbsp;whole interface with it, or&nbsp;keep everything strictly black and&nbsp;white.',
       'privacy.title': 'Your conversations stay yours',
       'privacy.p': 'We&nbsp;don’t collect your data. Here’s what Iskra does to&nbsp;keep it&nbsp;from anyone else.',
-      'p.keys.t': 'Tokens and keys',
-      'p.keys.p': 'Kept only in&nbsp;the Keychain on&nbsp;your device. They never sync anywhere, not even to&nbsp;backups.',
-      'p.messages.t': 'Messages and search',
-      'p.messages.p': 'Messages are encrypted on&nbsp;disk. Search runs on&nbsp;the device, and queries never leave it.',
-      'p.media.t': 'Photos and video',
+      'lit.lead': 'Staying with you:',
+      'lit.1': 'encryption keys',
+      'lit.2': 'sign-in tokens',
+      'lit.3': 'search queries',
+      'lit.4': 'photo locations',
+      'lit.and': 'and',
+      'lit.5': 'your camera model',
+      'p.keys.t': 'Tokens and&nbsp;keys',
+      'p.keys.p': 'Kept only in&nbsp;the&nbsp;Keychain on&nbsp;your device. They never sync anywhere, not&nbsp;even to&nbsp;backups.',
+      'p.messages.t': 'Messages and&nbsp;search',
+      'p.messages.p': 'Messages are encrypted on&nbsp;disk. Search runs on&nbsp;the&nbsp;device, and&nbsp;queries never leave it.',
+      'p.media.t': 'Photos and&nbsp;video',
       'p.media.p': 'Sent without metadata by&nbsp;default: no&nbsp;location, no&nbsp;camera model.',
       'p.logs.t': 'Logs',
-      'p.logs.p': 'No&nbsp;messages, tokens or&nbsp;passwords ever end up&nbsp;in&nbsp;the logs.',
+      'p.logs.p': 'No&nbsp;messages, tokens or&nbsp;passwords ever end up&nbsp;in&nbsp;the&nbsp;logs.',
       'p.crypto.t': 'Cryptography',
       'p.crypto.p': 'All encryption comes from <a href="https://github.com/matrix-org/matrix-rust-sdk">matrix-rust-sdk</a>. We&nbsp;haven’t rewritten any of&nbsp;it&nbsp;ourselves.',
-      'oss.title': 'All the code is&nbsp;open, under GPL-3.0',
-      'oss.p': 'You can read Iskra’s code, build it&nbsp;yourself or&nbsp;suggest a&nbsp;change. The app is&nbsp;still in&nbsp;development, and GitHub is&nbsp;the easiest place to&nbsp;follow along.',
+      'oss.f.license': 'Licence',
+      'oss.f.crypto': 'Encryption',
+      'oss.f.code': 'Code',
+      'oss.title': 'All the&nbsp;code is&nbsp;open, under GPL-3.0',
+      'oss.p': 'You&nbsp;can read Iskra’s code, build it&nbsp;yourself or&nbsp;suggest a&nbsp;change. The&nbsp;app is&nbsp;still in&nbsp;development, and&nbsp;GitHub is&nbsp;the&nbsp;easiest place to&nbsp;follow along.',
       'oss.github': 'Iskra on&nbsp;GitHub',
-      'oss.license': 'Read the licence',
+      'oss.license': 'Read the&nbsp;licence',
       'dl.title': 'Try Iskra',
-      'dl.p': 'The iPhone, iPad and Mac apps will arrive on&nbsp;the App Store when they’re ready. The web version already works in&nbsp;your browser.',
-      'dl.ios.t': 'iPhone and iPad',
-      'dl.ios.req': 'iOS and iPadOS 18 or&nbsp;later',
+      'dl.p': 'The&nbsp;iPhone, iPad and&nbsp;Mac apps will arrive on&nbsp;the&nbsp;App Store when they’re ready. The&nbsp;web version already works in&nbsp;your browser.',
+      'dl.ios.t': 'iPhone and&nbsp;iPad',
+      'dl.ios.req': 'iOS and&nbsp;iPadOS 18 or&nbsp;later',
       'dl.mac.req': 'macOS 15 or&nbsp;later',
       'dl.android.req': 'APK file on&nbsp;GitHub',
       'dl.web.t': 'Browser',
       'dl.web.req': 'Nothing to&nbsp;install',
       'dl.web.act': 'Open web.iskra.wtf',
-      'footer.links': 'Links',
-      'footer.matrix': 'What is&nbsp;Matrix',
-      'footer.server': 'Your own server',
-      'footer.privacy': 'Privacy',
-      'footer.terms': 'Terms',
     };
 
     // Строки, которые собирает скрипт, — на обоих языках.
@@ -314,7 +352,7 @@
         card.querySelector('.platform__mine')?.remove();
         if (key === mine) {
           card.classList.add('is-mine');
-          card.insertAdjacentHTML('afterbegin', `<span class="platform__mine">${d.mine}</span>`);
+          card.querySelector('h3').insertAdjacentHTML('afterend', `<p class="platform__mine">${d.mine}</p>`);
         }
         if (key === 'web') return;
         card.querySelector('.act').innerHTML = RELEASED
@@ -324,13 +362,24 @@
     }
 
 
-    // ── Иконка на первом экране меняется каждые 3 секунды ──
+    // ── Иконка в заголовке меняется каждые 3 секунды ──
     // Все восемь иконок приложения, в том же порядке, что в его настройках.
     const ICONS = ['spark', 'chrome', 'garnet', 'pine', 'rio-de-janeiro', 'black-white', 'retro', 'letters'];
     const stage = document.getElementById('appicon');
     const imgs = [stage.querySelector('img')];
+    const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
     let current = 0;
-    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+
+    // Первый экран ждёт картинку иконки: когда она загружена и расшифрована, иконка, название,
+    // шифр и описание стартуют одним сигналом — иначе текст успевает уйти вперёд, пока иконка
+    // грузится. Если картинка не придёт, через полторы секунды экран показывается без неё.
+    const first = imgs[0];
+    const loaded = (first.complete ? Promise.resolve() : new Promise((done) => { first.onload = first.onerror = done; }))
+      .then(() => first.decode && first.decode())
+      .catch(() => {});
+    const heroReady = Promise.race([loaded, new Promise((done) => setTimeout(done, 1500))]);
+
+    if (!still) {
       ICONS.slice(1).forEach((id) => {
         const img = new Image(640, 640);
         img.alt = '';
@@ -349,14 +398,35 @@
       }, 3000);
     }
 
+    // ── Цвет интерфейса в чате: семь цветов и моно, как в настройках приложения ──
+    const chat = document.getElementById('chat');
+    // Цвет красит и чат, и «пузырь» в тексте рядом с ним: пары цветов — в site.css, по data-accent.
+    const scope = document.getElementById('features');
+    chat.querySelectorAll('.picker button').forEach((b) => b.addEventListener('click', () => {
+      chat.querySelectorAll('.picker button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      scope.dataset.accent = b.dataset.accent;
+    }));
+
+    // ── Что остаётся у вас: подсвечивается по одному пункту ──
+    const lits = [...document.querySelectorAll('#litlist .lit')];
+    let lit = 0;
+    lits[0].classList.add('is-lit');
+    if (!still) setInterval(() => {
+      if (document.hidden) return;
+      lits[lit].classList.remove('is-lit');
+      lit = (lit + 1) % lits.length;
+      lits[lit].classList.add('is-lit');
+    }, 2000);
+
     Site.init({ en: EN, onLanguage: renderDownloads, reveal: true });
 
 
     // ── Подзаголовок и описание «расшифровываются» при загрузке ──
     // Сначала вместо букв случайные знаки, потом слева направо проступает настоящий текст.
-    // Чтобы текст не прыгал: случайный знак берётся из того же алфавита и регистра и почти
-    // той же ширины в этом шрифте, а переносы строк на время эффекта закреплены там же,
-    // где они стоят у настоящего текста.
+    // Чтобы текст не прыгал: на время эффекта каждая буква стоит в своей ячейке ровно той
+    // ширины, что у настоящей буквы на этом месте (вместе с кернингом), а переносы строк
+    // закреплены там же, где они стоят у настоящего текста. В конце ячейки снова меняются
+    // на обычный текст — он ложится точно туда же.
     // Запускается после Site.init: тот читает русский текст из разметки.
     function decrypt(el, { start, spread }) {
       const CLASSES = [
@@ -364,77 +434,87 @@
         'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '0123456789',
       ];
       const SYMBOLS = '#%&*$@+=<>?';
-      const ctx = document.createElement('canvas').getContext('2d');
-      ctx.font = getComputedStyle(el).font;
-      const width = (ch) => ctx.measureText(ch).width;
-      const near = (chars, ch, tolerance) => {
-        const w = width(ch);
-        return [...chars].filter((c) => c !== ch && Math.abs(width(c) - w) <= w * tolerance);
-      };
-      const twins = new Map();
       const fakeFor = (ch) => {
-        if (!twins.has(ch)) {
-          const own = CLASSES.find((set) => set.includes(ch)) || '';
-          twins.set(ch, { letters: near(own, ch, 0.08), symbols: near(SYMBOLS, ch, 0.08) });
-        }
-        const { letters, symbols } = twins.get(ch);
-        const list = symbols.length && (Math.random() < 0.15 || !letters.length) ? symbols : letters;
-        return list.length ? list[Math.floor(Math.random() * list.length)] : ch;
+        const own = CLASSES.find((set) => set.includes(ch));
+        const list = !own || Math.random() < 0.15 ? SYMBOLS : own;
+        return list[Math.floor(Math.random() * list.length)];
       };
 
-      // Где браузер переносит строки у настоящего текста: пробел перед первой буквой новой строки.
+      // Ширина каждой буквы и места переносов — у настоящего текста, до подмены.
       const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
       const nodes = [];
       const range = document.createRange();
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      const cells = [];
       let top = null;
       let lastSpace = null;
-      while (walker.nextNode()) {
-        const node = walker.currentNode;
-        const item = { node, text: node.data, breaks: new Set() };
-        nodes.push(item);
-        for (let i = 0; i < node.data.length; i++) {
-          if (/\s/.test(node.data[i])) { lastSpace = { item, i }; continue; }
+      const items = nodes.map((node) => {
+        const chars = [...node.data].map((ch, i) => {
           range.setStart(node, i);
           range.setEnd(node, i + 1);
-          const rect = range.getClientRects()[0];
-          if (!rect) continue;
-          if (top !== null && rect.top > top + 1 && lastSpace) lastSpace.item.breaks.add(lastSpace.i);
-          top = rect.top;
-        }
-      }
-      const total = nodes.reduce((n, { text }) => n + text.length, 0);
-      let offset = 0;
-      nodes.forEach((item) => {
-        item.at = [...item.text].map((_, i) => start + ((offset + i) / total) * spread + Math.random() * 150);
-        offset += item.text.length;
+          const rect = range.getBoundingClientRect();
+          const cell = { ch, left: rect.left, top: rect.top, width: rect.width, br: false };
+          if (/\s/.test(ch)) lastSpace = cell;
+          else if (rect.width) {
+            if (top !== null && rect.top > top + 1 && lastSpace) lastSpace.br = true;
+            top = rect.top;
+          }
+          return cell;
+        });
+        return { node, chars };
+      });
+      // Ширина ячейки — до начала следующей буквы на той же строке: так в неё входят и
+      // кернинг, и межбуквенный интервал, и строка из ячеек совпадает с настоящей до пикселя.
+      const flat = items.flatMap(({ chars }) => chars);
+      flat.forEach((c, i) => {
+        const next = flat[i + 1];
+        if (next && !c.br && Math.abs(next.top - c.top) < 1 && next.left > c.left) c.width = next.left - c.left;
       });
 
-      el.style.whiteSpace = 'pre';
+      const total = items.reduce((n, { chars }) => n + chars.length, 0);
+      let offset = 0;
+      const wrappers = items.map(({ node, chars }) => {
+        const wrap = document.createElement('span');
+        chars.forEach((c, i) => {
+          if (c.br) { wrap.append(document.createElement('br')); return; }
+          const span = document.createElement('span');
+          span.style.cssText = `display:inline-block;width:${c.width}px;white-space:pre`;
+          span.textContent = c.ch;
+          wrap.append(span);
+          if (/[\p{L}\p{N}]/u.test(c.ch)) {
+            cells.push({ span, ch: c.ch, at: start + ((offset + i) / total) * spread + Math.random() * 150 });
+          }
+        });
+        offset += chars.length;
+        node.replaceWith(wrap);
+        return { wrap, node };
+      });
+      el.style.whiteSpace = 'nowrap';
+
+      const finish = () => {
+        wrappers.forEach(({ wrap, node }) => { if (wrap.isConnected) wrap.replaceWith(node); });
+        el.style.whiteSpace = '';
+      };
       const t0 = performance.now();
       let last = -Infinity;
       (function frame(now) {
-        if (!el.contains(nodes[0].node)) { el.style.whiteSpace = ''; return; } // переключили язык
+        if (!wrappers[0].wrap.isConnected) { el.style.whiteSpace = ''; return; } // переключили язык
         const t = now - t0;
         if (t - last >= 50) {
           last = t;
-          nodes.forEach((item) => {
-            item.node.data = [...item.text].map((ch, i) => {
-              if (item.breaks.has(i)) return '\n';
-              if (t >= item.at[i] || !/[\p{L}\p{N}]/u.test(ch)) return ch;
-              return fakeFor(ch);
-            }).join('');
-          });
+          cells.forEach((c) => { c.span.textContent = t >= c.at ? c.ch : fakeFor(c.ch); });
         }
         if (t < start + spread + 150) return requestAnimationFrame(frame);
-        nodes.forEach((item) => { item.node.data = item.text; });
-        el.style.whiteSpace = '';
+        finish();
       })(t0);
     }
 
-    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    heroReady.then(() => {
+      document.getElementById('hero').classList.replace('is-waiting', 'is-shown');
+      if (still) return;
       decrypt(document.querySelector('.hero__sub'), { start: 100, spread: 550 });
       decrypt(document.querySelector('.hero__body'), { start: 250, spread: 800 });
-    }
+    });
   </script>
 </body>
 </html>

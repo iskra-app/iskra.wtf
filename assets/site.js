@@ -59,18 +59,25 @@ window.Site = (() => {
     update();
   }
 
-  // Разделы проявляются из размытия, когда доходят до экрана (включается `reveal: true`).
-  // После появления класс снимается, чтобы вернуть блокам внутри свои переходы.
+  // Блоки проявляются при прокрутке (включается `reveal: true`): у каждого `[data-reveal]`
+  // части — заголовок, текст, пункты списка — поднимаются по очереди, с шагом 70 мс.
+  // Без JS и при «уменьшить движение» всё видно сразу. После появления классы снимаются,
+  // чтобы вернуть блокам их собственные переходы.
   function watchReveal() {
     if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const targets = document.querySelectorAll('main .section > .wrap');
+    const targets = document.querySelectorAll('main [data-reveal]');
 
     const show = (el) => {
-      el.classList.add('is-shown');
-      el.addEventListener('transitionend', function done(e) {
-        if (e.target !== el || e.propertyName !== 'opacity') return;
-        el.removeEventListener('transitionend', done);
-        el.classList.remove('reveal', 'is-shown');
+      const parts = el.matches('ul, ol, dl, .platforms, .split__text') ? [...el.children] : [el];
+      parts.forEach((part, i) => {
+        part.style.transitionDelay = `${i * 70}ms`;
+        part.classList.add('is-shown');
+        part.addEventListener('transitionend', function done(e) {
+          if (e.target !== part || e.propertyName !== 'opacity') return;
+          part.removeEventListener('transitionend', done);
+          part.classList.remove('reveal', 'is-shown');
+          part.style.transitionDelay = '';
+        });
       });
     };
 
@@ -83,11 +90,26 @@ window.Site = (() => {
       });
     }, { rootMargin: '0px 0px -10% 0px' });
 
-    targets.forEach((el) => { el.classList.add('reveal'); observer.observe(el); });
+    targets.forEach((el) => {
+      const parts = el.matches('ul, ol, dl, .platforms, .split__text') ? [...el.children] : [el];
+      parts.forEach((part) => part.classList.add('reveal'));
+      observer.observe(el);
+    });
   }
 
+  // Общие для всех страниц строки: подвал.
+  const COMMON_EN = {
+    'footer.top': 'Back to&nbsp;top',
+    'footer.links': 'Links',
+    'footer.home': 'Home',
+    'footer.matrix': 'What is&nbsp;Matrix',
+    'footer.server': 'Your own server',
+    'footer.privacy': 'Privacy',
+    'footer.terms': 'Terms',
+  };
+
   function init({ en, onLanguage: callback, reveal = false }) {
-    TEXT.en = en;
+    TEXT.en = { ...COMMON_EN, ...en };
     TEXT.ru = {
       'meta.title': document.title,
       'meta.description': document.querySelector('meta[name="description"]').content,
