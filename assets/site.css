@@ -107,7 +107,7 @@ body {
   font-size: var(--fs-body);
   line-height: 1.5;
   letter-spacing: -0.011em;
-  font-feature-settings: "zero";
+  font-feature-settings: "zero" 0, "tnum" 0, "ss01" 0, "ss02" 0, "ss03" 0, "ss04" 0, "ss05" 0, "ss06" 0, "ss07" 0, "ss08" 0;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
 }
